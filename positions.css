@@ -1,13 +1,19 @@
 
 body {
     display: grid;
-    grid-template-columns: [start] 1fr [col1] 4fr [col2] 1fr [end];
-    grid-template-rows: [start] auto [nav] auto [content] auto [footer] auto [end];
+    grid-template-columns: [start] auto [col1] auto [col2] auto [col3] auto [end];
+    grid-template-rows: [start] auto [nav] auto [content] auto [informations] auto [options] auto [footer] auto [end];
+    margin: 0;
 }
 
-#title {
+header{
     grid-column: start / end;
     grid-row: start / nav;
+}
+
+form {
+    grid-column: col1 / col2;
+    grid-row: nav / content;
 }
 
 #main {
@@ -17,12 +23,28 @@ body {
 
 #content {
     grid-column: start / end;
-    grid-row: content / footer;
+    grid-row: content / informations;
 }
 
-#anuncio {
-    grid-column: col1 / col2;
-    grid-row: content / footer;
+img {
+    width: 50%;
+    height: auto;
+    grid-column: start / end;
+}
+
+#informations {
+    grid-column: start / end;
+    grid-row: informations/ options;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+#options {
+    grid-column: start / end;
+    grid-row: options / footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 #footer {
@@ -37,10 +59,11 @@ body {
 
 #sub-menu ul {
     display: flex;
-    flex-direction:column;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center; /* Ajusta o alinhamento para o centro */
     text-align: center;
 }
+
 #main li {
     display: inline;
     flex: 1;

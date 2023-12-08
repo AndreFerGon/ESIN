@@ -52,21 +52,22 @@ CREATE TABLE Purchase (
     date_ INTEGER NOT NULL,
     client TEXT NOT NULL REFERENCES Client
 );
+
+CREATE TABLE Category (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL
+); 
  
 CREATE TABLE Product (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     category INTEGER NOT NULL REFERENCES Category,
     model TEXT NOT NULL,
     /*serial_number TEXT NOT NULL AUTOINCREMENT,*/
-    price FLOAT NOT NULL,
+    price FLOAT NOT NULL
     /*reparation INTEGER NOT NULL REFERENCES Reparation */
 );
 
-CREATE TABLE Category (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT NOT NULL
-);
- 
+
  
 CREATE TABLE DeliveryCenter (
     id INTEGER PRIMARY KEY,

@@ -1,130 +1,143 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#title {
-    width: 100%;
-    min-height: 30px;
-    background-color: #f2f9f9;
-    text-align: center;
-    line-height: 30px; 
-    margin: bottom 10px; 
-    padding: 30px;
+header {
+  width: 100%;
+  min-height: 70px;
+  background-color: #f2f9f9;
+  text-align: center;
+  line-height: 70px; 
+  margin: bottom 10px; 
 }
- 
+
 #main {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  #nav {
-    width: 100%;
-    min-height: 30px;
-    background-color: #bbdbe1;
-   text-align: center;
-   line-height: 30px; 
-   margin: bottom 10px; 
+  font-family: 'Arial', sans-serif;
 }
 
-  
-  #nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #nav li {
-    display: inline-block;
-    margin-right: 20px;
-    position: relative;
-  }
-  
-  #nav a {
-    text-decoration: none;
-    color: #dfeff7;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
-  #nav a:hover {
-    color: #13446c;
-  }
+#nav {
+  width: 100%;
+  min-height: 30px;
+  background-color: #bbdbe1;
+ text-align: center;
+ line-height: 30px; 
+ margin: bottom 10px; 
+}
 
-  #nav li:hover #sub-menu {
-    display: block;
-    text-align: center;
-  }
-  
-  #sub-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ddf0f1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }
-  
-  #sub-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  #sub-menu li {
-    margin: 0;
-    text-align: center;
-  }
-  
-  #sub-menu a {
-    display: block;
-    padding: 10px;
-    color: #134e6c;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  #sub-menu a:hover {
-    color: #96b7ba;
-  }
 
-  #sub-menu li:hover {
-    margin: 0;
-    color: #777;
-  }
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  #content {
-    display: grid;
-    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
-    width: 100%;
-    height: 1000px;
-    background-color: #ffffff;
-    text-align: center;
-    line-height: 30px;
-    margin-bottom: 10px;
-    grid-template-columns: [first] 40px [line2] 1fr [line3] 1fr [col4-start] 50px [five] 40px [end];
-    padding: 30px;
-  }
-  
-  #anuncio {
-    grid-column: line3 / end;
-    grid-row: row1-end / third-line;
-    background-color: #f2f9f9;
-    text-align: center;
-    line-height: 10px;
-    margin-bottom: 10px;
-    padding: 30px;
-    place-self: center;
+#nav li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+
+#nav a {
+  text-decoration: none;
+  color: #dfeff7;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#nav a:hover {
+  color: #13446c;
+}
+
+#nav li:hover #sub-menu {
+  display: block;
+  text-align: center;
+}
+
+#sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ddf0f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  left: 35%; 
+}
+
+#sub-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#sub-menu li {
+  margin: 0;
+  text-align: center;
+}
+
+#sub-menu a {
+  display: block;
+  padding: 10px;
+  color: #134e6c;
+  text-decoration: none;
+  text-align: center;
+}
+
+#sub-menu a:hover {
+  color: #96b7ba;
+}
+
+#sub-menu li:hover {
+  margin: 0;
+  color: #777;
+}
+
+#content {
+  width: 100%;
+  height:auto;
+  background-color: #f6f8f9;
+  text-align: center;
+  line-height: 30px;
+  padding: 30px;
+}
+
+img {
+  width: 100%;
+  text-align: center;
+  line-height: 10px;
+  margin-bottom: 10px;
+  place-self: center;
+}
+
+#informations {
+font-family: 'Arial', sans-serif;
+font-size: 10px;
+width: 100%;
+min-height: 30px;
+background-color: #6ecaca;
+text-align: center;
+line-height: 30px; 
+margin-bottom: 1em;
+}
+
+
+#options {
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  min-height: 30px;
+  background-color: #f0ffff;
+  text-align: center;
+  line-height: 30px; 
+  padding: 10px;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 #footer {
-    width: 100%;
-    min-height: 1px;
-    background-color: #bbdbe1;
-    text-align: center;
-    line-height: px; 
-    margin: bottom 10px; 
-    padding: 30px;
+  width: 100%;
+  background-color: #bbdbe1;
+  text-align: center;
 }
