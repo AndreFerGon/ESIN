@@ -75,7 +75,7 @@
       <div id="right">
         <h2>About Us</h2>
         <p>
-          <a href="aboutus.html">See more</a>
+          <a href="apoioaocliente.php">See more</a>
         </p>
       </div>
     </div>
