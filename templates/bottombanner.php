@@ -26,19 +26,19 @@
 
     <div id="options">
       <div id="left">
-        <h2>Deliveries</h2>
+        <h2>Apoio ao Cliente</h2>
         <p>
-          <a href="deliveries.html">See more</a>
+          <a href="poioaocliente.php">See more</a>
         </p>
       </div>
       <div id="center">
-        <h2>Reparation</h2>
+        <h2>Informação Legal</h2>
         <p>
           <a href="reparation.html">See more</a>
         </p>
       </div>
       <div id="right">
-        <h2>About Us</h2>
+        <h2>Sobre</h2>
         <p>
           <a href="apoioaocliente.php">See more</a>
         </p>
