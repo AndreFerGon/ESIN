@@ -23,12 +23,7 @@ try {
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Technology Store</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="positions.css" />
-  </head>
+
   <body>
      
     <section id="products">
@@ -37,9 +32,11 @@ try {
             <?php if ($error_msg == null) { ?>
                 <?php foreach ($products as $row) { ?>
                     <article>
-                        <h3><?php echo $row['model']; ?></h3>                    
-                        <img src="images/products/<?php echo $row['photo']; ?>.png" alt="A">
-                        <span class="price"><?php echo $row['price']; ?></span>
+                        <a href="product_details.php?id=<?php echo $row['id']; ?>">
+                            <h3><?php echo $row['model']; ?></h3>                    
+                            <img src="images/products/<?php echo $row['id']; ?>.png" alt="A">
+                            <span class="price"><?php echo $row['price']; ?></span>
+                        </a>
                    </article>
                 <?php } ?>
             <?php } else {
