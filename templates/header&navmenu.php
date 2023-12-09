@@ -5,10 +5,28 @@
     <title>Technology Store</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="positions.css" />
+    <style>
+      #cart img {
+        width: 50px; /* Adjust the width as needed */
+        height: auto; /* Maintain aspect ratio */
+      }
+      #user img {
+        width: 50px; /* Adjust the width as needed */
+        height: auto; /* Maintain aspect ratio */
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Technology</h1>
+    
+    <a id="cart" href="list_cart.php">
+        <img src="images/cart.png">        
+    </a>
+    <a id="user" href="user.php">
+        <img src="images/user.png">        
+    </a>
+    
     </header>
     <div id="main">
       <div id="nav">
