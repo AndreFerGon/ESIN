@@ -20,7 +20,7 @@
     <header>
       <h1>Technology</h1>
     
-    <a id="cart" href="list_cart.php">
+    <a id="cart" href="cart.php">
         <img src="images/cart.png">        
     </a>
     <a id="user" href="user.php">

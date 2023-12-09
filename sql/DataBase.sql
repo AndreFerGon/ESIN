@@ -118,13 +118,11 @@ CREATE TABLE ReparationFacility (
 
 
 
--- Insert Categories
 INSERT INTO Category (name) VALUES ('Laptops');
 INSERT INTO Category (name) VALUES ('Smartphones');
 INSERT INTO Category (name) VALUES ('Tablets');
 INSERT INTO Category (name) VALUES ('Accessories');
 
--- Insert Laptops
 INSERT INTO Product (category, model, price, specs) VALUES (1, 'MacBook Air 13', '1489', '2022 | M2 | 8GB | 512GB SSD | GPU 10-Core | Cinzento Sideral');
 INSERT INTO Product (category, model, price, specs) VALUES (1, 'Gaming Laptop MSI Katana 15 B13VGK-1649PT', '1659.99', '15.6 | GeForce RTX 4070 | Intel® Core™ i9-13900H | 32GB | 1TB');
 INSERT INTO Product (category, model, price, specs) VALUES (1, 'Laptop HP Pavilion Plus 14-eh1004np', '849.99', '14 | EVO i5-1340P | 16GB | 512GB | Prateado natural');
@@ -132,4 +130,23 @@ INSERT INTO Product (category, model, price, specs) VALUES (1, 'Laptop Lenovo Id
 INSERT INTO Product (category, model, price, specs) VALUES (1, 'Laptop Lenovo Yoga 7 14IRL8', '1499.99', '14 | Intel® EVO Core™ i7-1360P | 16GB | 1TB');
 INSERT INTO Product (category, model, price, specs) VALUES (1, 'MacBook Pro 14', '2599', '2023 | M3 Pro 11-core | 18GB | 512GB SSD - Preto Sideral');
 
+INSERT INTO Product (category, model, price, specs) VALUES (2, 'Apple iPhone 13', '569.99', '128GB - Meia-Noite - Recondicionado - Grade C');
+INSERT INTO Product (category, model, price, specs) VALUES (2, 'Apple iPhone 14 Pro Max', '1249.99', '256GB - Preto Sideral - Recondicionado - Grade A');
+INSERT INTO Product (category, model, price, specs) VALUES (2, 'Samsung Galaxy A04S', '129.99', '32GB - Preto');
+INSERT INTO Product (category, model, price, specs) VALUES (2, 'Samsung Galaxy S23', '879.99', '5G 256GB - Preto');
+INSERT INTO Product (category, model, price, specs) VALUES (2, 'Samsung Galaxy A14', '189.99', '128GB - Preto');
+INSERT INTO Product (category, model, price, specs) VALUES (2, 'Samsung Galaxy A54', '439.99', '5G - 128GB - Graphite');
 
+INSERT INTO Product (category, model, price, specs) VALUES (3, 'Apple iPad Pro 11.0\', '1099', '256GB - WiFi - Prateado');
+INSERT INTO Product (category, model, price, specs) VALUES (3, 'Apple iPad 10.2\', '579', 'Wi-Fi - 256GB - Prateado');
+INSERT INTO Product (category, model, price, specs) VALUES (3, 'Tablet Lenovo Tab P11 TB350FU', '399.99', '128GB Wi-Fi + Capa + Teclado + Precision Pen 2');
+INSERT INTO Product (category, model, price, specs) VALUES (3, 'Tablet Samsung Galaxy Tab S9 FE+ 12.4', '699.99', '128GB - Gray');
+INSERT INTO Product (category, model, price, specs) VALUES (3, 'Lenovo Tab M10 Plus TB128FU', '219.99', '128 GB - Wi-Fi - Cinzento - 2023');
+INSERT INTO Product (category, model, price, specs) VALUES (3, 'Tablet Lenovo Tab M9 TB310FU', '159.99', '64GB - Wi-Fi - Arctic Grey + Capa');
+
+INSERT INTO Product (category, model, price, specs) VALUES (4, 'Auscultadores Bluetooth Marshall Major IV', '99.99', 'Preto');
+INSERT INTO Product (category, model, price, specs) VALUES (4, 'Auscultadores Bluetooth Audio-Technica ATH-S220BT', '69.99', 'Preto');
+INSERT INTO Product (category, model, price, specs) VALUES (4, 'Rato Gaming Razer', '24.99', 'Fio DeathAdder Essentia');
+INSERT INTO Product (category, model, price, specs) VALUES (4, 'Rato Bluetooth Logitech MX Master 3S', '99.99', 'Graphite');
+INSERT INTO Product (category, model, price, specs) VALUES (4, 'Teclado Bluetooth Ewent Slim', '19.99', 'PT- Prateado');
+INSERT INTO Product (category, model, price, specs) VALUES (4, 'Teclado Gaming Razer Huntsman Mini RGB', '99.99', 'Red Switches - Branco');

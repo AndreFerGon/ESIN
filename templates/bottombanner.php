@@ -26,21 +26,21 @@
 
     <div id="options">
       <div id="left">
-        <h2>Helpdes</h2>
+        <h2>Helpdesk</h2>
         <p>
-          <a href="apoioaocliente.php">See more</a>
+          <a href="customersupport.php">See more</a>
         </p>
       </div>
       <div id="center">
         <h2>Legal Information</h2>
         <p>
-          <a href="informaçãolegal.php">See more</a>
+          <a href="legalinfo.php">See more</a>
         </p>
       </div>
       <div id="right">
         <h2>About Us</h2>
         <p>
-          <a href="sobre.php">See more</a>
+          <a href="aboutus.php">See more</a>
         </p>
       </div>
     </div>
