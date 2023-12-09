@@ -16,7 +16,6 @@ try {
     $stmt_products->execute(array($category_id));
     $products = $stmt_products->fetchAll();
 
-
 } catch (PDOException $e) {
     $error_msg = $e->getMessage();
 }
@@ -38,10 +37,10 @@ try {
             <?php if ($error_msg == null) { ?>
                 <?php foreach ($products as $row) { ?>
                     <article>
-                        <h3><?php echo $row['model']; ?></h3>
-                        <img src="images/1.png" alt="Smartphone Image">
+                        <h3><?php echo $row['model']; ?></h3>                    
+                        <img src="images/products/<?php echo $row['photo']; ?>.png" alt="A">
                         <span class="price"><?php echo $row['price']; ?></span>
-                    </article>
+                   </article>
                 <?php } ?>
             <?php } else {
                 echo $error_msg;

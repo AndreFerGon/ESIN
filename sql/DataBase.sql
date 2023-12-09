@@ -62,6 +62,8 @@ CREATE TABLE Product (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     category INTEGER NOT NULL REFERENCES Category,
     model TEXT NOT NULL,
+    specs TEXT NOT NULL,
+    photo TEXT NOT NULL,
     /*serial_number TEXT NOT NULL AUTOINCREMENT,*/
     price FLOAT NOT NULL
     /*reparation INTEGER NOT NULL REFERENCES Reparation */
@@ -114,23 +116,18 @@ CREATE TABLE ReparationFacility (
 
 
 
-INSERT INTO Category (name) VALUES ('Computer');
-INSERT INTO Category (name) VALUES ('SmartPhone');
-INSERT INTO Category (name) VALUES ('Tablet');
+-- Insert Categories
+INSERT INTO Category (name) VALUES ('Laptops');
+INSERT INTO Category (name) VALUES ('Smartphones');
+INSERT INTO Category (name) VALUES ('Tablets');
 INSERT INTO Category (name) VALUES ('Accessories');
 
- 
+-- Insert Laptops
+INSERT INTO Product (category, model, price, specs, photo) VALUES (1, 'MacBook Air 13', '1489', '2022 | M2 | 8GB | 512GB SSD | GPU 10-Core | Cinzento Sideral','C1');
+INSERT INTO Product (category, model, price, specs, photo) VALUES (1, 'Gaming Laptop MSI Katana 15 B13VGK-1649PT', '1659.99', '15.6 | GeForce RTX 4070 | Intel® Core™ i9-13900H | 32GB | 1TB','C2');
+INSERT INTO Product (category, model, price, specs, photo) VALUES (1, 'Laptop HP Pavilion Plus 14-eh1004np', '849.99', '14 | EVO i5-1340P | 16GB | 512GB | Prateado natural','C3');
+INSERT INTO Product (category, model, price, specs, photo) VALUES (1, 'Laptop Lenovo IdeaPad Gaming 3 15ACH6', '849.99', '15.6" | R5-5500H | 16 GB | 512 GB SSD | RTX 2050 | Win11','C4');
+INSERT INTO Product (category, model, price, specs, photo) VALUES (1, 'Laptop Lenovo Yoga 7 14IRL8', '1499.99', '14 | Intel® EVO Core™ i7-1360P | 16GB | 1TB','C5');
+INSERT INTO Product (category, model, price, specs, photo) VALUES (1, 'MacBook Pro 14', '2599', '2023 | M3 Pro 11-core | 18GB | 512GB SSD - Preto Sideral','C6');
 
-INSERT INTO Product (category, model, price) VALUES (1, 'PC1', '10');
-INSERT INTO Product (category, model, price) VALUES (1, 'PC2', '11');
-INSERT INTO Product (category, model, price) VALUES (1, 'PC3', '12');
-INSERT INTO Product (category, model, price) VALUES (1, 'PC4', '13');
-INSERT INTO Product (category, model, price) VALUES (2, 'S1', '20');
-INSERT INTO Product (category, model, price) VALUES (2, 'S2', '21');
-INSERT INTO Product (category, model, price) VALUES (2, 'S3', '22');
-INSERT INTO Product (category, model, price) VALUES (3, 'T1', '30');
-INSERT INTO Product (category, model, price) VALUES (3, 'T2', '31');
-INSERT INTO Product (category, model, price) VALUES (3, 'T3', '32');
-INSERT INTO Product (category, model, price) VALUES (4, 'A1', '40');
-INSERT INTO Product (category, model, price) VALUES (4, 'A2', '41');
-INSERT INTO Product (category, model, price) VALUES (4, 'A3', '42');
+
