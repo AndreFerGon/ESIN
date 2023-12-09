@@ -9,7 +9,7 @@
         <input type="submit" value="Login" />
         <p>
           Not a member yet?
-          <a href="#">Register</a>
+          <a href="areapessoal.php">Register</a>
         </p>
       </form>
     </div>
