@@ -66,9 +66,8 @@ CREATE TABLE Product (
     category INTEGER NOT NULL REFERENCES Category,
     model TEXT NOT NULL,
     specs TEXT NOT NULL,
-    /*serial_number TEXT NOT NULL AUTOINCREMENT,*/
     price FLOAT NOT NULL
-    /*reparation INTEGER NOT NULL REFERENCES Reparation */
+    reparation INTEGER NOT NULL REFERENCES Reparation
 );
 
 
