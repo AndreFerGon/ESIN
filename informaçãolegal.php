@@ -2,51 +2,50 @@
 <html lang="en">
   <body>
     <div id="customer-support">
-      <h2>Enquadramento Legal</h2>
+      <h2>Legal Information</h2>
       <p>
-        A empresa LOJA DE TECNIOLOGIA está sujeita à legislação portuguesa que regula as atividades comerciais, 
-        nomeadamente o Código Comercial e o Código do Consumidor. Além disso, a venda de produtos eletrónicos e
-       a prestação de serviços de reparação devem cumprir as normativas específicas para garantir a segurança 
-       dos consumidores e a integridade dos produtos.
+        The company TECHNOLOGY STORE is subject to Portuguese legislation that regulates commercial activities, namely 
+        the Commercial Code and the Consumer Code. In addition, the sale of electronic products and the provision of 
+        repair services must comply with specific regulations to ensure consumer safety and product integrity.
       </p>
-      <h3>Venda de Produtos Eletrónicos</h3>
+      <h3>Sale of Electronic Products</h3>
       <p>
-        A empresa compromete-se a disponibilizar informações detalhadas sobre os produtos eletrónicos à venda, 
-        incluindo especificações técnicas, garantias e informações sobre a utilização correta. Todas as transações 
-        comerciais obedecerão às leis de proteção do consumidor, garantindo a transparência e o direito de arrependimento.
+        The company commits to providing detailed information about electronic products for sale, including technical 
+        specifications, warranties, and information on correct usage. All commercial transactions will comply with consumer 
+        protection laws, ensuring transparency and the right to withdrawal.
       </p>
-      <h3>Entrega ao Domicílio</h3>
+      <h3>Home Delivery</h3>
       <p>
-        No âmbito do serviço de entregas ao domicílio, a empresa seguirá as normas estabelecidas para o comércio 
-        eletrónico em Portugal. Os prazos de entrega serão claramente comunicados aos clientes, e em caso de atrasos
-        ou problemas na entrega, a empresa compromete-se a informar e resolver a situação de forma eficiente.
+        Within the scope of home delivery services, the company will adhere to the established norms for e-commerce in Portugal. 
+        Delivery times will be clearly communicated to customers, and in the case of delays or issues with delivery, the company 
+        commits to informing and resolving the situation efficiently.
       </p>
-      <h3>Garantia e Assistência Técnica</h3>
+      <h3>Warranty and Technical Assistance</h3>
       <p>
-       Todos os produtos vendidos pela empresa estarão cobertos por uma garantia legal. Além disso, a empresa oferecerá
-        serviços de assistência técnica e reparação para os produtos eletrónicos comercializados. As condições de garantia 
-        e os procedimentos para assistência técnica serão devidamente comunicados aos clientes.
+        All products sold by the company will be covered by a legal warranty. Additionally, the company will provide technical 
+        assistance and repair services for the marketed electronic products. Warranty conditions and procedures for technical 
+        assistance will be properly communicated to customers.
       </p>
-      <h3>Política de Devoluções e Reembolsos</h3>
+      <h3>Returns and Refunds Policy</h3>
       <p>
-        A empresa respeitará integralmente as normas de devolução e reembolso, garantindo o direito dos clientes de 
-        devolverem produtos defeituosos ou insatisfeitos, conforme estabelecido na legislação do consumidor em vigor.
+        The company will fully respect return and refund regulations, ensuring customers' right to return defective or unsatisfactory 
+        products, as established in current consumer protection legislation.
       </p>
-      <h3>Proteção de Dados</h3>
+      <h3>Data Protection</h3>
       <p>
-        A empresa compromete-se a cumprir as normas de proteção de dados pessoais, assegurando a privacidade dos clientes. 
-        Os dados recolhidos serão utilizados exclusivamente para fins comerciais e de assistência ao cliente, respeitando 
-        as leis de proteção de dados em vigor.
+        The company commits to complying with personal data protection standards, ensuring customer privacy. Collected data will be 
+        used exclusively for commercial and customer support purposes, in accordance with current data protection laws.
       </p>
-      <h3>Prevenção de Conflitos e Resolução de Litígios</h3>
+      <h3>Conflict Prevention and Dispute Resolution</h3>
       <p>
-        Em caso de litígios, a empresa procurará soluções amigáveis e, se necessário, recorrerá a métodos alternativos de 
-        resolução de litígios, como a mediação ou arbitragem, em conformidade com a legislação aplicável.
+        In case of disputes, the company will seek amicable solutions and, if necessary, resort to alternative dispute resolution 
+        methods such as mediation or arbitration, in compliance with applicable legislation.
       </p>
 
       <p>
-      A LOJA DE TECNOLOGIA compromete-se a operar de acordo com os mais elevados padrões éticos e legais, proporcionando 
-      aos clientes uma experiência de compra segura, transparente e satisfatória.
+       TECHNOLOGY STORE commits to operate in accordance with the highest ethical and legal standards, providing customers with a secure, 
+       transparent, and satisfactory shopping experience.
+      </p>
   
     </div>  
    

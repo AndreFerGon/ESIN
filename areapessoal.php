@@ -9,10 +9,10 @@
 <body>
     <div class="menu">
         <ul>
-            <li><a href="#">Área Pessoal</a></li>
-            <li><a href="#">As minhas encomendas</a></li>
-            <li><a href="#">As minhas devoluções</a></li>
-            <li><a href="#">As minhas reparações</a></li>
+            <li><a href="#">Personal Area</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">My Returns</a></li>
+            <li><a href="#">My Repairs</a></li>
         </ul>
     </div>
 </body>

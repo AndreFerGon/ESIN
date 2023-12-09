@@ -2,54 +2,40 @@
 <html lang="en">
   <body>
     <div id="customer-support">
-      <h2>Sobre</h2>
+      <h2>About Us</h2>
       <p>
-       Na iTEC, estamos empenhados em redefinir a forma como as pessoas interagem com a tecnologia. Desde a nossa 
-       fundação, perseguimos a inovação constante e a excelência, com a missão de criar soluções tecnológicas que 
-       simplificam e aprimoram a sua vida diária.
+        At iTEC, we are committed to redefining how people interact with technology. Since our foundation, we have pursued constant innovation and excellence, with the mission of creating technological solutions that simplify and enhance your daily life.
       </p>
-      <h3>A Nossa História:</h3>
+    <h3>Our History:</h3>
       <p>
-      A iTEC foi concebida por um grupo visionário de empreendedores, movidos pela paixão pela inovação e pela 
-      convicção de que a tecnologia pode ser uma força positiva no mundo. Fundada há alguns anos, a empresa rapidamente 
-      se destacou no cenário tecnológico, lançando produtos que não apenas seguiam as tendências, mas as moldavam.
-      Desde a nossa génese, estabelecemos valores fundamentais que moldam tudo o que fazemos. A inovação é o nosso 
-      lema, a integridade é a nossa base, e o compromisso com a satisfação do cliente é a nossa bússola. 
-      Estes valores impulsionaram o nosso crescimento e continuam a guiar cada decisão que tomamos.
+        iTEC was conceived by a visionary group of entrepreneurs, driven by a passion for innovation and the belief that technology can be a positive force in the world. Founded a few years ago, the company quickly stood out in the technological landscape, launching products that not only followed trends but shaped them.
+        From our inception, we have established fundamental values that shape everything we do. Innovation is our motto, integrity is our foundation, and commitment to customer satisfaction is our compass. These values have propelled our growth and continue to guide every decision we make.
       </p>
-      <h3>A nossa ação</h3>
+    <h3>Our Action</h3>
       <p>
-        Na iTEC, a nossa oferta abrange uma ampla gama de produtos tecnológicos projetados para simplificar a sua vida. 
-        Desde dispositivos eletrónicos de última geração até soluções inteligentes para casa e escritório, cada produto 
-        é cuidadosamente concebido para oferecer funcionalidade intuitiva e desempenho excepcional.
-        Os nossos smartphones combinam design elegante com tecnologia avançada, proporcionando uma experiência fluida e 
-        envolvente. Os dispositivos inteligentes para casa transformam o seu espaço, proporcionando maior conforto e 
-        eficiência. E, para aqueles momentos em que a sua tecnologia precisa de assistência, oferecemos serviços de suporte 
-        técnico e reparação de confiança.
+       At iTEC, our offering spans a wide range of technological products designed to simplify your life. From cutting-edge electronic devices to smart solutions for home and office, each product is carefully designed to offer intuitive functionality and exceptional performance.
+       Our smartphones blend elegant design with advanced technology, providing a smooth and engaging experience. Smart home devices transform your space, providing greater comfort and efficiency. And for those moments when your technology needs assistance, we offer reliable technical support and repair services.
       </p>
-      <h3>Compromisso com a Sustentabilidade</h3>
+    <h3>Commitment to Sustainability</h3>
       <p>
-        Consciente da responsabilidade ambiental, a iTEC incorporou práticas sustentáveis em todas as fases de produção. 
-        Desde a escolha de materiais até a gestão eficiente de recursos, a empresa busca constantemente minimizar seu impacto 
-        ambiental e promover uma abordagem sustentável para o desenvolvimento tecnológico.
+       Conscious of environmental responsibility, iTEC has incorporated sustainable practices at every stage of production. From material choices to efficient resource management, the company constantly seeks to minimize its environmental impact and promote a sustainable approach to technological development.
       </p>
-      <h3>Crescimento Global</h3>
+    <h3>Global Growth</h3>
       <p>
-       À medida que a iTEC ganhou destaque no cenário tecnológico, expandiu suas operações para além das fronteiras nacionais.
-       A marca "iTEC" tornou-se sinónimo de qualidade, confiança e inovação em diversos mercados internacionais.
+        As iTEC gained prominence in the technological landscape, it expanded its operations beyond national borders. The "iTEC" brand has become synonymous with quality, trust, and innovation in various international markets.
       </p>
-      <h3>Futuro Promissor</h3>
+    <h3>Promising Future</h3>
       <p>
-       Hoje, a iTEC continua a inovar, impulsionada por uma equipa dedicada de profissionais apaixonados. A empresa olha para 
-       o futuro com entusiasmo, mantendo-se comprometida em criar tecnologias que não apenas acompanhem, mas também antecipem 
-       as necessidades em constante evolução dos consumidores.
+       Today, iTEC continues to innovate, driven by a dedicated team of passionate professionals. The company looks to the future with enthusiasm, remaining committed to creating technologies that not only keep up with but also anticipate the ever-evolving needs of consumers.
       </p>
+
       <p>
-      A história da "iTEC" é um testemunho da perseverança, criatividade e dedicação à excelência que caracterizam essa jornada empreendedora.
-      </p>  
+       The story of "iTEC" is a testament to perseverance, creativity, and dedication to excellence that characterize this entrepreneurial journey.
+      </p>
+ 
     </div>
     <div id="center">
-        <h2>Contactos</h2>
+        <h2>Contacts</h2>
         <p>
           <a href="contacts.php">See more</a>
         </p>

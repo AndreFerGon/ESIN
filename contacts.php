@@ -2,19 +2,19 @@
 <html lang="en">
   <body>
     <div id="customer-support">
-      <h2>Contacte a iTEC - Estamos Aqui para Si!</h2>
+    <h2>Contact iTEC - We're Here for You!</h2>
       <p>
-       Na iTEC, valorizamos a comunicação aberta e estamos sempre disponíveis para atender às suas perguntas, preocupações 
-       ou feedback. A sua experiência é a nossa prioridade, e queremos garantir que receba o suporte necessário sempre que 
-       precisar. Abaixo encontrará todas as informações de contacto para se conectar connosco.
+       At iTEC, we value open communication and are always available to address your questions, concerns, or feedback.
+       Your experience is our priority, and we want to ensure that you receive the necessary support whenever you need it.
+       Below, you'll find all the contact information to connect with us.
       </p>
-      <h3>A Nossa Sede</h3>
+      <h3>Our Headquarters</h3>
       <p>
-       Rua da Inovação, 123
-       Tecnópolis, Código Postal 56789-012
-       Cidade da Inovação, Portugal
+       Innovation Street, 123
+       Technopolis, Postal Code 56789-012
+       Innovation City, Portugal
       </p>
-      <h3>Telefone</h3>
+      <h3>Phone</h3>
       <p>
        +351 123 456 789
       </p>
@@ -22,13 +22,13 @@
       <p>
        info@itec.pt
       </p>
-      <h3>Horário de Atendimento:</h3>
+      <h3>Service Hours:</h3>
       <p>
-       Segunda a Sexta: 9h00 - 18h00
-       Sábado: 10h00 - 14h00
-       Domingo: Encerrado
+       Monday to Friday: 9:00 AM - 6:00 PM
+       Saturday: 10:00 AM - 2:00 PM
+       Sunday: Closed
       </p>
-      <h3>Apoio ao cliente: Formulário de contacto</h3>
+      <h3>Customer Support: Contact Form</h3>
       <p>
       <form action="process_form.php" method="post">
         <label for="name">Name:</label>

@@ -2,40 +2,39 @@
 <html lang="en">
   <body>
     <div id="customer-support">
-      <h2>Apoio ao cliente</h2>
+    <h2>Customer Support</h2>
       <p>
-        Na LOJA DE TECNOLOGIA, entendemos que a espera pela chegada dos seus produtos é sempre ansiosa. 
-        É por isso que nos empenhamos em proporcionar um envio rápido e eficiente para todos os cantos de Portugal. 
-        E a melhor parte? Os portes são completamente gratuitos! Não queremos que preocupações com custos de entrega 
-        atrapalhem a sua experiência de compra.
+        At TECHNOLOGY STORE, we understand that the anticipation for the arrival of your products is always exciting.
+        That's why we strive to provide fast and efficient shipping to every corner of Portugal.
+        And the best part? Shipping is completely free! We don't want delivery costs to overshadow your shopping experience.
       </p>
-      <h3>Trocas e Devoluções Descomplicadas</h3>
+      <h3>Straightforward Exchanges and Returns</h3>
       <p>
-        Queremos que cada compra seja perfeita, por isso, oferecemos um processo de troca e devolução descomplicado. 
-        Se por acaso não ficar completamente satisfeito com o seu produto, temos uma política flexível que permite 
-        trocas e devoluções dentro de um prazo razoável. A sua satisfação é a nossa prioridade, e estamos aqui para 
-        garantir que cada compra seja uma experiência positiva.
+        We want every purchase to be perfect, which is why we offer a straightforward exchange and return process.
+        If, by any chance, you are not completely satisfied with your product, we have a flexible policy that allows
+        exchanges and returns within a reasonable timeframe. Your satisfaction is our priority, and we're here to ensure
+        that every purchase is a positive experience.
       </p>
-      <h3>Garantia de Qualidade em Todos os Produtos</h3>
+      <h3>Quality Guarantee on All Products</h3>
       <p>
-        Na LOJA DE TECNOLOGIA, a qualidade dos produtos é a nossa assinatura. Cada item em nosso catálogo é 
-        cuidadosamente selecionado para garantir o melhor em termos de desempenho, durabilidade e inovação tecnológica. 
-        Além disso, oferecemos garantia em todos os produtos para que você tenha total tranquilidade. Estamos comprometidos 
-        em fornecer apenas o melhor em tecnologia, respaldado pela nossa garantia de qualidade.
+        At TECHNOLOGY STORE, product quality is our signature. Each item in our catalog is carefully selected
+        to ensure the best in terms of performance, durability, and technological innovation.
+        Additionally, we offer a warranty on all products so that you have complete peace of mind.
+        We are committed to providing only the best in technology, backed by our quality guarantee.
       </p>
-      <h3>Métodos de Pagamento Seguros e Convenientes</h3>
+      <h3>Secure and Convenient Payment Methods</h3>
       <p>
-        Facilitamos o processo de pagamento para que a sua experiência de compra seja tão suave quanto possível. 
-        Aceitamos diversos métodos de pagamento seguros, desde cartões de crédito até opções de pagamento online. 
-        Na LOJA DE TECNOLOGIA, a segurança das suas transações é uma prioridade, e você pode confiar que os seus 
-        dados estão protegidos em todas as etapas do processo.
+        We make the payment process easy so that your shopping experience is as smooth as possible.
+        We accept various secure payment methods, from credit cards to online payment options.
+        At TECHNOLOGY STORE, the security of your transactions is a priority, and you can trust that your data
+        is protected at every stage of the process.
       </p>
       <p>
-        Na LOJA DE TECNOLOGIA, não vendemos apenas produtos tecnológicos; oferecemos uma experiência de compra 
-        completa, desde o momento em que faz o seu pedido até a entrega do produto à sua porta. Conte connosco para 
-        proporcionar tecnologia de ponta, serviços excepcionais e total tranquilidade em todas as suas transações.
+        At TECHNOLOGY STORE, we don't just sell technological products; we offer a complete shopping experience,
+        from the moment you place your order to the delivery of the product to your doorstep.
+        Count on us to provide cutting-edge technology, exceptional services, and total peace of mind in all your transactions.
       </p>
-      </h3>Para mais informações</h3>
+      <h3>For more information</h3>
       <p>
       <form action="process_form.php" method="post">
         <label for="name">Name:</label>
