@@ -2,39 +2,53 @@
 <html lang="en">
   <body>
     <div id="customer-support">
-      <h2>Apoio ao cliente</h2>
+      <h2>Enquadramento Legal</h2>
       <p>
-        Na LOJA DE TECNOLOGIA, entendemos que a espera pela chegada dos seus produtos é sempre ansiosa. 
-        É por isso que nos empenhamos em proporcionar um envio rápido e eficiente para todos os cantos de Portugal. 
-        E a melhor parte? Os portes são completamente gratuitos! Não queremos que preocupações com custos de entrega 
-        atrapalhem a sua experiência de compra.
+        A empresa LOJA DE TECNIOLOGIA está sujeita à legislação portuguesa que regula as atividades comerciais, 
+        nomeadamente o Código Comercial e o Código do Consumidor. Além disso, a venda de produtos eletrónicos e
+       a prestação de serviços de reparação devem cumprir as normativas específicas para garantir a segurança 
+       dos consumidores e a integridade dos produtos.
       </p>
-      <h3>Trocas e Devoluções Descomplicadas</h3>
+      <h3>Venda de Produtos Eletrónicos</h3>
       <p>
-        Queremos que cada compra seja perfeita, por isso, oferecemos um processo de troca e devolução descomplicado. 
-        Se por acaso não ficar completamente satisfeito com o seu produto, temos uma política flexível que permite 
-        trocas e devoluções dentro de um prazo razoável. A sua satisfação é a nossa prioridade, e estamos aqui para 
-        garantir que cada compra seja uma experiência positiva.
+        A empresa compromete-se a disponibilizar informações detalhadas sobre os produtos eletrónicos à venda, 
+        incluindo especificações técnicas, garantias e informações sobre a utilização correta. Todas as transações 
+        comerciais obedecerão às leis de proteção do consumidor, garantindo a transparência e o direito de arrependimento.
       </p>
-      <h3>Garantia de Qualidade em Todos os Produtos</h3>
+      <h3>Entrega ao Domicílio</h3>
       <p>
-        Na LOJA DE TECNOLOGIA, a qualidade dos produtos é a nossa assinatura. Cada item em nosso catálogo é 
-        cuidadosamente selecionado para garantir o melhor em termos de desempenho, durabilidade e inovação tecnológica. 
-        Além disso, oferecemos garantia em todos os produtos para que você tenha total tranquilidade. Estamos comprometidos 
-        em fornecer apenas o melhor em tecnologia, respaldado pela nossa garantia de qualidade.
+        No âmbito do serviço de entregas ao domicílio, a empresa seguirá as normas estabelecidas para o comércio 
+        eletrónico em Portugal. Os prazos de entrega serão claramente comunicados aos clientes, e em caso de atrasos
+        ou problemas na entrega, a empresa compromete-se a informar e resolver a situação de forma eficiente.
       </p>
-      <h3>Métodos de Pagamento Seguros e Convenientes</h3>
+      <h3>Garantia e Assistência Técnica</h3>
       <p>
-        Facilitamos o processo de pagamento para que a sua experiência de compra seja tão suave quanto possível. 
-        Aceitamos diversos métodos de pagamento seguros, desde cartões de crédito até opções de pagamento online. 
-        Na LOJA DE TECNOLOGIA, a segurança das suas transações é uma prioridade, e você pode confiar que os seus 
-        dados estão protegidos em todas as etapas do processo.
+       Todos os produtos vendidos pela empresa estarão cobertos por uma garantia legal. Além disso, a empresa oferecerá
+        serviços de assistência técnica e reparação para os produtos eletrónicos comercializados. As condições de garantia 
+        e os procedimentos para assistência técnica serão devidamente comunicados aos clientes.
       </p>
+      <h3>Política de Devoluções e Reembolsos</h3>
       <p>
-        Na LOJA DE TECNOLOGIA, não vendemos apenas produtos tecnológicos; oferecemos uma experiência de compra 
-        completa, desde o momento em que faz o seu pedido até a entrega do produto à sua porta. Conte connosco para 
-        proporcionar tecnologia de ponta, serviços excepcionais e total tranquilidade em todas as suas transações.
+        A empresa respeitará integralmente as normas de devolução e reembolso, garantindo o direito dos clientes de 
+        devolverem produtos defeituosos ou insatisfeitos, conforme estabelecido na legislação do consumidor em vigor.
       </p>
+      <h3>Proteção de Dados</h3>
+      <p>
+        A empresa compromete-se a cumprir as normas de proteção de dados pessoais, assegurando a privacidade dos clientes. 
+        Os dados recolhidos serão utilizados exclusivamente para fins comerciais e de assistência ao cliente, respeitando 
+        as leis de proteção de dados em vigor.
+      </p>
+      <h3>Prevenção de Conflitos e Resolução de Litígios</h3>
+      <p>
+        Em caso de litígios, a empresa procurará soluções amigáveis e, se necessário, recorrerá a métodos alternativos de 
+        resolução de litígios, como a mediação ou arbitragem, em conformidade com a legislação aplicável.
+      </p>
+
+      <p>
+      A LOJA DE TECNOLOGIA compromete-se a operar de acordo com os mais elevados padrões éticos e legais, proporcionando 
+      aos clientes uma experiência de compra segura, transparente e satisfatória.
+      </p>
+      
       </h3>Para mais informações</h3>
       <p>
       <form action="process_form.php" method="post">
