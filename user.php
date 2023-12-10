@@ -35,7 +35,7 @@ try {
         
         <?php
         if ($userDetails) {
-            echo '<p>Address: ' . $userDetails['address'] . '</p>';
+            echo '<p>Address: ' . $userDetails['address_'] . '</p>';
             echo '<p>VAT: ' . $userDetails['vat'] . '</p>';
         } else {
             echo 'Unable to fetch user details.';
