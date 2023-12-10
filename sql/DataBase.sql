@@ -18,7 +18,7 @@ DROP TABLE IF EXISTS ProductPurchase;
 DROP TABLE IF EXISTS PurchaseShop;
 DROP TABLE IF EXISTS ReparationFacility;
  
- 
+
 CREATE TABLE Person (
     vat INTEGER PRIMARY KEY,
     name_ TEXT NOT NULL,
@@ -26,11 +26,15 @@ CREATE TABLE Person (
     email TEXT NOT NULL
 );
  
- 
+
+
+
 CREATE TABLE Client (
-    vat INTEGER PRIMARY KEY REFERENCES Person,
-    address_ TEXT NOT NULL,
-    delivery_center INTEGER NOT NULL REFERENCES DeliveryCenter 
+    username TEXT PRIMARY KEY,
+    password TEXT,
+    vat INTEGER ,
+    address_ TEXT NOT NULL
+    /*delivery_center INTEGER NOT NULL REFERENCES DeliveryCenter*/
 );
  
  
@@ -67,7 +71,7 @@ CREATE TABLE Product (
     model TEXT NOT NULL,
     specs TEXT NOT NULL,
     price FLOAT NOT NULL
-    reparation INTEGER NOT NULL REFERENCES Reparation
+    /*reparation INTEGER NOT NULL REFERENCES Reparation*/
 );
 
 

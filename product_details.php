@@ -1,4 +1,8 @@
 <?php
+// Home.php
+session_start();
+?>
+<?php
 
 $product_id = $_GET['id'];
 

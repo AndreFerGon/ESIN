@@ -1,4 +1,8 @@
 <?php
+// Home.php
+session_start();
+?>
+<?php
 $category_id = $_GET['cat'];
 
 try {
@@ -23,9 +27,7 @@ try {
 
 <!DOCTYPE html>
 <html lang="en">
-
-  <body>
-     
+  <body>       
     <section id="products">
         <h2><?php echo $category; ?></h2>
         <div class="list">

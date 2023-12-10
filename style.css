@@ -137,6 +137,59 @@ margin-bottom: 1em;
 }
 
 
+
+
+/* Add these styles for the products.php page */
+
+#products {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#products h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#products .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#products article {
+  width: 48%; /* Adjust as needed based on your layout preference */
+  margin-bottom: 20px;
+}
+
+#products article a {
+  text-decoration: none;
+  color: #333;
+}
+
+#products article h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#products article img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#products article .price {
+  display: block;
+  font-size: 16px;
+  color: #4CAF50; /* Green color for price */
+  margin-top: 5px;
+}
+
+
+
+
+
 #footer {
   width: 100%;
   background-color: #bbdbe1;
