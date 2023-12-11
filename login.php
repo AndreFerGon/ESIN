@@ -3,6 +3,7 @@
 session_start();
 ?>
 <?php
+$errorMsg = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate and sanitize user input
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
@@ -26,10 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } else {
             // Invalid username or password
-            echo 'Invalid username or password. Please try again.';
+            $errorMsg = 'Invalid username or password. Please try again.';
         }
     } catch (PDOException $e) {
-        echo 'Error: ' . $e->getMessage();
+        $errorMsg = 'Error: ' . $e->getMessage();
     }
 }
 ?>
@@ -39,6 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div>
+        <h2>Login</h2>
+        <?php
+        // Display the error message if there is one
+        echo '<p style="color: red;">' . $errorMsg . '</p>';
+        ?>
         <form action="login.php" method="post">
             <input type="text" placeholder="Username" name="username" required />
             <input type="password" placeholder="Password" name="password" required />

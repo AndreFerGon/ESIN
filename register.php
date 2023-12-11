@@ -18,19 +18,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt_username = $dbh->prepare('SELECT COUNT(*) FROM Client WHERE username = ?');
         $stmt_username->execute([$username]);
         $username_count = $stmt_username->fetchColumn();
-
-        $stmt_vat = $dbh->prepare('SELECT COUNT(*) FROM Client WHERE vat = ?');
-        $stmt_vat->execute([$vat]);
-        $vat_count = $stmt_vat->fetchColumn();
-
-      
-            // Save user information to the database
+        
+        if ($username_count > 0) {
+            // Username already in use, display error message
+            $error_msg = 'Username is already in use. Please choose a different username.';
+        } else {
+            // Username is not in use, proceed with registration
             $stmt_insert = $dbh->prepare('INSERT INTO Client (username, password, vat, address_) VALUES (?, ?, ?, ?)');
             $stmt_insert->execute([$username, $password, $vat, $address]);
 
             // Redirect to login page after successful registration
             header('Location: login.php');
             exit();
+        }
         
     } catch (PDOException $e) {
         echo 'Error: ' . $e->getMessage();
@@ -41,14 +41,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="en">
 <body>
+    
     <section id="registration">
         <h2>Registration</h2>
+        <?php
+        if (isset($error_msg)) {
+            echo '<p style="color: red;">' . $error_msg . '</p>';
+        }
+        ?>
         <form action="register.php" method="post">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" placeholder="Username" required>
             
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="password" name="password" placeholder="Password" required minlength="8">
             
             <label for="vat">VAT</label>
             <input type="text" id="vat" name="vat" placeholder="VAT" required>
