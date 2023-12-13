@@ -14,7 +14,7 @@ $userLoggedIn = isset($_SESSION['user_id']);
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="positions.css" />
     <style>
-        #cart img, #user img {
+        #cart img, #user img, #favorites img{
             width: 50px; /* Adjust the width as needed */
             height: auto; /* Maintain aspect ratio */
         }
@@ -28,6 +28,11 @@ $userLoggedIn = isset($_SESSION['user_id']);
         <?php if ($userLoggedIn) { ?>
               <a id="cart" href="cart.php">
                   <img src="images/cart.png" alt="Cart">        
+               </a>
+        <?php }  ?>
+        <?php if ($userLoggedIn) { ?>
+               <a id="favorites" href="favorites.php">
+                   <img src="images/favorite1.png" alt="User">        
                </a>
         <?php }  ?>
         <?php if ($userLoggedIn) { ?>
