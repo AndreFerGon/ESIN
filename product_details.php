@@ -41,7 +41,7 @@ try {
             <input type="hidden" name="id" value="<?php echo $row['id']?>">
             <input type="hidden" name="name" value="<?php echo $row['name']?>">
             <input type="hidden" name="price" value="<?php echo $row['price']?>">
-            <button>Add to cart</button>
+            <button type="submit" name="Carrinho_submit">Add to cart</button>
         </form>
 
     <?php } else { ?>
