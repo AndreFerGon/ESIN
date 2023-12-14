@@ -68,3 +68,14 @@ img {
     display: inline;
     flex: 1;
 }
+
+#login { 
+    grid-column: col1 / col3;
+    grid-row: content / informations;
+   
+}
+
+#registration {
+    grid-column: start / end;
+    grid-row: content / informations;
+}
