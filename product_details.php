@@ -1,6 +1,7 @@
 <?php
 // Home.php
 session_start();
+$userLoggedIn = isset($_SESSION['user_id']);
 ?>
 <?php
 
@@ -20,6 +21,27 @@ try {
     $error_msg = $e->getMessage();
 }
 
+if ($userLoggedIn && isset($_POST['favorite_submit'])) {
+    try {
+        $stmt_check_favorite = $dbh->prepare('SELECT * FROM Favorites WHERE username = ? AND id = ?');
+        $stmt_check_favorite->execute(array($_SESSION['user_id'], $product_id));
+        $is_favorite = $stmt_check_favorite->fetch();
+
+        if ($is_favorite) {
+            // If already a favorite, remove from favorites
+            $stmt_remove_favorite = $dbh->prepare('DELETE FROM Favorites WHERE username = ? AND id = ?');
+            $stmt_remove_favorite->execute(array($_SESSION['user_id'], $product_id));
+            $debug_message = "Product removed from favorites";
+        } else {
+            // If not a favorite, add to favorites
+            $stmt_add_favorite = $dbh->prepare('INSERT INTO Favorites (username, id) VALUES (?, ?)');
+            $stmt_add_favorite->execute(array($_SESSION['user_id'], $product_id));
+            $debug_message = "Product added to favorites";
+        }
+    } catch (PDOException $e) {
+        $error_msg = $e->getMessage();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +59,8 @@ try {
         <p><?php echo $product_details['specs']; ?></p>
         <p>Price: <?php echo $product_details['price']; ?></p>
 
-<form action="addtocart.php" method="post">
+        <?php if ($userLoggedIn) { ?>
+            <form action="addtocart.php" method="post">
     <input type="hidden" name="id" value="<?php echo $product_details['id']; ?>">
     <input type="hidden" name="model" value="<?php echo $product_details['model']; ?>">
     <input type="hidden" name="price" value="<?php echo  $product_details['price']; ?>">
@@ -45,10 +68,30 @@ try {
     <button type="submit" name="Carrinho_submit">Add to cart</button>
 </form>
 
+            <form action="" method="post">
+                <button type="submit" name="favorite_submit" > <!-- Assuming favorite_submit handles favorite logic -->
+                    <img id="favoriteImg" src="images/favorite1.png" alt="Favorite">
+                </button>
+                <p id="debugMessage"><?php echo isset($debug_message) ? $debug_message : ''; ?></p>
+            </form>
+        <?php } else { ?>
+            <form id="loginForm" action="Login.php" method="post">
+                <button type="button" onclick="redirectToLogin()">Add to cart</button>
+                <button type="button" onclick="redirectToLogin()">
+                    <img id="favoriteImg" src="images/favorite1.png" alt="Favorite">
+                </button>
+            </form>
+
+            <script>
+                function redirectToLogin() {
+                    window.location.href = 'Login.php';
+                }
+            </script>
+        <?php } ?>
+
     <?php } else { ?>
         <p>Product not found.</p>
     <?php } ?>
-    
 </section>
 <?php
 include_once('templates/header&navmenu.php');
