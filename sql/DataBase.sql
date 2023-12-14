@@ -17,6 +17,8 @@ DROP TABLE IF EXISTS Facility;
 DROP TABLE IF EXISTS ProductPurchase;
 DROP TABLE IF EXISTS PurchaseShop;
 DROP TABLE IF EXISTS ReparationFacility;
+
+DROP TABLE IF EXISTS Favorites;
  
 
 CREATE TABLE Person (
@@ -119,6 +121,14 @@ CREATE TABLE ReparationFacility (
     PRIMARY KEY(facility, reparation)
 );
 
+
+CREATE TABLE Favorites (
+    username TEXT,
+    id INTEGER,
+    PRIMARY KEY (username, id),
+    FOREIGN KEY (username) REFERENCES Users(username),
+    FOREIGN KEY (id) REFERENCES Product(id)
+);
 
 
 INSERT INTO Category (name) VALUES ('Laptops');
