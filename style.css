@@ -186,7 +186,101 @@ margin-bottom: 1em;
   margin-top: 5px;
 }
 
+#login {
+  font-size: 1em;
+  font-family: 'open sans', sans-serif;
+  width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  margin-top:7em;
+  margin-bottom:7em;
+}
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #bfcdcf;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #84b5ca;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+a {
+  color: #a6cdf6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#registration {
+  font-size: 17px;
+  font-family: 'open sans', sans-serif;
+  width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  margin-top: 6em;
+  margin-bottom: 6em;
+  background-color: #faf9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#registration h2 {
+  text-align: center;
+  color: #333;
+}
+
+#registration form {
+  display: flex;
+  flex-direction: column;
+}
+
+#registration label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#registration input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#registration button {
+  background-color: #bfcdcf;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#registration button:hover {
+  background-color: #9fc2c6;
+}
 
 
 
