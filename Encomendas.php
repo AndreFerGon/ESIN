@@ -15,6 +15,7 @@ if (!isset($_SESSION['orders']) || count($_SESSION["orders"]) == 0) {
 } else {
     // Get the latest order (assuming the last one is in progress)
     $latestOrder = end($_SESSION['orders']);
+}
 ?>
     <div>
         <h3>Order ID: <?php echo $latestOrder['order_id']; ?></h3>
