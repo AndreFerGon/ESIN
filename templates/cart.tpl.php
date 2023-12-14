@@ -31,7 +31,7 @@
 
       <p>Total: <?php echo $totalPrice ?></p>
 
-      <form action="action_checkout.php">
+      <form action="Check-out.php">
           <button>Checkout</button>
       </form>
 

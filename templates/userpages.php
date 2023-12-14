@@ -9,7 +9,7 @@
     <div class="menu">
         <ul>
             <li><a href="#">Personal Area</a></li>
-            <li><a href="#">My Orders</a></li>
+            <li><a href="Encomendas.php">My Orders</a></li>
             <li><a href="#">My Returns</a></li>
             <li><a href="#">My Repairs</a></li>
         </ul>
