@@ -1,8 +1,6 @@
 <?php
 // Home.php
 session_start();
-
-$userLoggedIn = isset($_SESSION['user_id']);
 ?>
 <?php
 
@@ -29,26 +27,6 @@ try {
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
-    <style>
-        #favoriteImg {
-            width: 30px; /* Adjust the width as needed */
-            height: auto; /* Maintain the aspect ratio */
-        }
-    </style>
-    <script>
-        function toggleFavorite() {
-            var debugMessageElement = document.getElementById("debugMessage");
-            var imgElement = document.getElementById("favoriteImg");
-            if (imgElement.src.endsWith("images/favorite1.png")) {
-                imgElement.src = "images/favorite2.png";
-                debugMessageElement.textContent = "Product added to favorites";
-                
-            } else {
-                imgElement.src = "images/favorite1.png";
-                debugMessageElement.textContent = "Product removed from favorites";
-            }
-        }
-    </script>
    </head>
 <body>
 
@@ -59,36 +37,13 @@ try {
         <p><?php echo $product_details['specs']; ?></p>
         <p>Price: <?php echo $product_details['price']; ?></p>
 
-        
-        <input type="hidden" name="id" value="<?php echo $row['id']?>">
-        <input type="hidden" name="name" value="<?php echo $row['name']?>">
-        <input type="hidden" name="price" value="<?php echo $row['price']?>">
-                
-          
-       
-        <?php if ($userLoggedIn) { ?>
-            <form action="addtocart.php" method="post">                
-                <button type="submit" name="Carrinho_submit">Add to cart</button>
-                <button type="button" onclick="toggleFavorite()"> <!-- Assuming toggleFavorite handles favorite logic -->
-                    <img id="favoriteImg" src="images/favorite1.png" alt="Favorite">
-                </button>
-                <p id="debugMessage"></p>
-            </form>
-        <?php } else { ?>
-            <form id="loginForm" action="Login.php" method="post">
-                <button type="button" onclick="redirectToLogin()">Add to cart</button>
-                <button type="button" onclick="redirectToLogin()">
-                    <img id="favoriteImg" src="images/favorite1.png" alt="Favorite">
-                </button>
-            </form>
-
-        <script>
-            function redirectToLogin() {
-            window.location.href = 'Login.php';
-        }
-    </script>
-        <?php } ?>
-      
+<form action="addtocart.php" method="post">
+    <input type="hidden" name="id" value="<?php echo $product_details['id']; ?>">
+    <input type="hidden" name="model" value="<?php echo $product_details['model']; ?>">
+    <input type="hidden" name="price" value="<?php echo  $product_details['price']; ?>">
+    <input type="number" name="quantity" value="1" min="1">
+    <button type="submit" name="Carrinho_submit">Add to cart</button>
+</form>
 
     <?php } else { ?>
         <p>Product not found.</p>
