@@ -98,7 +98,7 @@ header {
 #content {
   width: 100%;
   height:auto;
-  background-color: #f6f8f9;
+  background-color: #ffffff;
   text-align: center;
   line-height: 30px;
   padding: 30px;
@@ -115,7 +115,7 @@ img {
 #informations {
 font-family: 'Arial', sans-serif;
 font-size: 10px;
-background-color:  #f6f8f9;
+background-color:  #ffffff;
 width: 100%;
 min-height: 20px;
 text-align: center;
@@ -275,8 +275,7 @@ line-height: 20px;
 #login {
   font-size: 1em;
   font-family: 'open sans', sans-serif;
-  width: 700px;
-  margin: 50px auto;
+  width: 100%;
   padding: 20px;
   margin-top:7em;
   margin-bottom:7em;
@@ -369,9 +368,115 @@ a:hover {
 }
 
 
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#contacts {
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  background-color:  #ffffff;
+  width: 100%;
+  min-height: 20px;
+  text-align: center;
+  line-height: 20px; 
+  margin-top: 3em;
+  
+  }
+
+#contacts-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+  
+  #address {
+    width: 100%;
+    min-height: 10px;
+    text-align: center;
+    line-height: 10px; 
+    padding: 10px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    background-color:  #f6f8f9;
+    border: 3px solid #d1d5d6;;
+  }
+  
+  #phone-email {
+    width: 100%;
+    min-height: 100px;
+    text-align: center;
+    line-height: 20px; 
+    padding: 10px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    background-color:  #f6f8f9;
+    border: 3px solid #d1d5d6;
+  }
+  
+  
+  #service-hours {
+    width: 100%;
+    min-height: 10px;
+    text-align: center;
+    line-height: 10px; 
+    padding: 10px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    background-color: #f6f8f9;
+    border: 3px solid #d1d5d6;
+  }
+
+#contact-form {
+  width: 100%;
+  min-height: 10px;
+  text-align: center;
+  line-height: 10px; 
+  padding: 10px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  background-color: #f6f8f9;
+  border: 3px solid #d1d5d6;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+input[type="submit"] {
+  background-color: #bfcdcf;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #84b5ca;
+}
+
 
 #footer {
   width: 100%;
   background-color: #bbdbe1;
   text-align: center;
 }
+
+
+
