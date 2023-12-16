@@ -21,7 +21,7 @@ session_start();
         Below, you'll find all the contact information to connect with us.
       </p>
       <div id="map">
-      <img src="mapa.png" alt="map">
+      <img src="images/mapa.png" alt="map">
       </div>
     </div>
 

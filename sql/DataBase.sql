@@ -54,13 +54,22 @@ CREATE TABLE Shop (
     reparation INTEGER NOT NULL REFERENCES Reparation
 );
  
- 
-CREATE TABLE Purchase (
+ CREATE TABLE Purchase (
     number_ INTEGER PRIMARY KEY,
     price INTEGER NOT NULL CHECK(price > 0),
     date_ INTEGER NOT NULL,
-    client TEXT NOT NULL REFERENCES Client
+    client TEXT NOT NULL REFERENCES Client,
+    delivery_option TEXT NOT NULL
 );
+
+
+CREATE TABLE Purchase_Products (
+    purchase_number INTEGER REFERENCES Purchase,
+    product_id INTEGER REFERENCES Product,
+    quantity INTEGER NOT NULL CHECK(quantity > 0),
+    PRIMARY KEY (purchase_number, product_id)
+);
+
 
 CREATE TABLE Category (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -73,7 +82,7 @@ CREATE TABLE Product (
     model TEXT NOT NULL,
     specs TEXT NOT NULL,
     price FLOAT NOT NULL
-    /*reparation INTEGER NOT NULL REFERENCES Reparation*/
+    
 );
 
 
@@ -98,12 +107,6 @@ CREATE TABLE Facility (
 );
  
  
-CREATE TABLE ProductPurchase (
-    purchase INTEGER NOT NULL REFERENCES Purchase,
-    product INTEGER NOT NULL REFERENCES Product,
-    quantity INTEGER NOT NULL CHECK (quantity IS NULL OR quantity > 0),
-    PRIMARY KEY(purchase, product)
-);
  
  
  

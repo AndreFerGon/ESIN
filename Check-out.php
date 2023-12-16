@@ -36,14 +36,21 @@ session_start();
                 <?php } ?>
             </table>
 
-            <p>Total: <?php echo $totalPrice ?></p>
+            <p>Total: <?php echo $totalPrice ?> €</p>
 
-            <!-- Form to enter the shipping address -->
-            <form action="Encomendas.php" method="post">
-              <label for="address">Shipping Address:</label>
-              <textarea name="address" id="address" rows="4" cols="50" required></textarea>
-              <button type="submit">Complete Purchase</button>
-            </form>
+            <!-- Form to enter the shipping address and choose delivery option -->
+        <form action="Purchase.php" method="post">   
+            <p>Choose delivery option:</p>
+            <input type="radio" name="delivery_option" value="pickup" required> Pick up in shop
+            <input type="radio" name="delivery_option" value="delivery" required> Deliver to home address
+            <button type="submit">Complete Purchase</button>
+        </form>
+
+
+
+
+           
+            
         <?php } ?>
 
         <?php
