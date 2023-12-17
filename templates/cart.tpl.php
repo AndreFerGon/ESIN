@@ -17,7 +17,7 @@
                   <td><img src="images/products/<?php echo $product['id'] ?>.png"></td>
                   <td><?php echo $product['id'] ?></td>
                   <td><?php echo $product['model'] ?></td>
-                  <td><?php echo $product['price'] ?></td>
+                  <td><?php echo $product['price'] ?> €</td>
                   <td><?php echo $product['quantity'] ?></td>
                   <td>
                       <form action="remove_from_cart.php" method="post">

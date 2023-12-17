@@ -3,7 +3,7 @@
    <body>   
     
     <div id="informations">
-      <div id="left">
+      <div id="left1">
         <img src="images/delivery.png" alt="Delivery" />
         <h2>24 hour delivery</h2>
       </div>
@@ -18,7 +18,7 @@
         <h2>Easy repair service</h2>
       </div>
 
-      <div id="right">
+      <div id="right1">
         <img src="images/free.png" alt="shipping" />
         <h2>Free shipping</h2>
       </div>

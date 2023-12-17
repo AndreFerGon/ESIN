@@ -70,7 +70,7 @@ img {
 }
 
 #login { 
-    grid-column: col1 / col3;
+    grid-column: start / end;
     grid-row: content / informations;
    
 }
@@ -79,3 +79,27 @@ img {
     grid-column: start / end;
     grid-row: content / informations;
 }
+
+#contacts {
+    grid-column: col1 / col3;
+    grid-row: content / informations;
+}
+
+#map {
+    grid-column: col1/ col3;
+    grid-row: content / informations;
+}
+
+#contacts-details {
+    grid-column: start / end;
+    grid-row: informations/ options;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+#contact-form {
+    grid-column: col1 / col3;
+    grid-row: options / footer;
+}
+
