@@ -6,19 +6,24 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <body>
+
+<?php
+    include_once('templates/userpages.php');
+    ?>
+    
   <h2>Order In Progress</h2>
 
 <?php
 // Check if there are orders
-if (!isset($_SESSION['orders']) || count($_SESSION["orders"]) == 0) {
+if (!isset($_SESSION['purchase']) || count($_SESSION["orders"]) == 0) {
     echo "<p>No orders placed</p>";
 } else {
     // Get the latest order (assuming the last one is in progress)
-    $latestOrder = end($_SESSION['orders']);
+    $latestOrder = end($_SESSION['purchase']);
 }
 ?>
     <div>
-        <h3>Order ID: <?php echo $latestOrder['order_id']; ?></h3>
+        <h3>Order ID: <?php echo $latestOrder['purchase_id']; ?></h3>
         <p>Status: <?php echo $latestOrder['status']; ?></p>
 
         <table>
@@ -29,7 +34,7 @@ if (!isset($_SESSION['orders']) || count($_SESSION["orders"]) == 0) {
                 <th>Quantity</th>
             </tr>
             <?php
-            foreach ($latestOrder['products'] as $product) {
+            foreach ($latestOrder['ProductPurchase'] as $product) {
             ?>
                 <tr>
                     <td><?php echo $product['id']; ?></td>

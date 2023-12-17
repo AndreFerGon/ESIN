@@ -2,37 +2,34 @@
 // user.php
 session_start();
 
-
 try {
-  $dbh = new PDO('sqlite:sql/DataBase.db');
-  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $dbh = new PDO('sqlite:sql/DataBase.db');
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  // Retrieve user information based on the provided username
-  $stmt = $dbh->prepare('SELECT address_, vat FROM Client WHERE username = ?');
-  $stmt->execute([$_SESSION['user_id']]);
-  $userDetails = $stmt->fetch(PDO::FETCH_ASSOC);
+    // Retrieve user information based on the provided username
+    $stmt = $dbh->prepare('SELECT address_, vat FROM Client WHERE username = ?');
+    $stmt->execute([$_SESSION['user_id']]);
+    $userDetails = $stmt->fetch(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-  echo 'Error: ' . $e->getMessage();
+    echo 'Error: ' . $e->getMessage();
 }
-
-
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
-</html>
-  <body>
-    
-  <div>
-  <h2>User Profile</h2>
+
+<body>
+
+    <div>
+        <h2>User Profile</h2>
         <p>Welcome, <?php echo $_SESSION['user_id']; ?>!</p>
-        
+
         <?php
         if ($userDetails) {
             echo '<p>Address: ' . $userDetails['address_'] . '</p>';
@@ -41,14 +38,13 @@ try {
             echo 'Unable to fetch user details.';
         }
         ?>
-
     </div>
-  
-    <?php
-   include_once('templates/header&navmenu.php');
-   include_once('templates/footer.php');
-   include_once('templates/userpages.php');
 
+    <?php
+    include_once('templates/header&navmenu.php');
+    include_once('templates/footer.php');
+    include_once('templates/userpages.php');
     ?>
-  </body>
+</body>
+
 </html>
