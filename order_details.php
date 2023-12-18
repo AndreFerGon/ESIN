@@ -80,6 +80,7 @@ try {
                         <th>Image</th>
                         <th>Price (€)</th>
                         <th>Quantity</th>
+                        <th>Return</th>
                       </tr>';
 
                 foreach ($purchaseProducts as $product) {
@@ -88,7 +89,15 @@ try {
                     echo '<td><img src="images/products/' . $product['id'] . '.png" alt="' . $product['model'] . '"></td>';
                     echo '<td>' . $product['price'] . '</td>';
                     echo '<td>' . $product['quantity'] . '</td>';
+                    echo '<td>';
+                    echo '<form action="process_return.php?purchase_id=' . $purchase_id . '" method="post">';
+                    echo '<input type="hidden" name="product_id" value="' . $product['id'] . '">';
+                    echo '<input type="hidden" name="quantity" value="' . $product['quantity'] . '">';
+                    echo '<button type="submit">Return</button>';
+                    echo '</form>';
+                    echo '</td>';
                     echo '</tr>';
+                    
                 }
 
                 echo '</table>';

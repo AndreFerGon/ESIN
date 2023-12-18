@@ -19,7 +19,17 @@ DROP TABLE IF EXISTS PurchaseShop;
 DROP TABLE IF EXISTS ReparationFacility;
 
 DROP TABLE IF EXISTS Favorites;
+DROP TABLE IF EXISTS Return;
  
+
+ CREATE TABLE Return (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    date_ TEXT NOT NULL,
+    purchase_number INTEGER NOT NULL REFERENCES Purchase(number_),
+    product_id INTEGER NOT NULL REFERENCES Product(id),
+    quantity INTEGER NOT NULL CHECK(quantity > 0)
+);
+
 
 CREATE TABLE Person (
     vat INTEGER PRIMARY KEY,
@@ -28,30 +38,23 @@ CREATE TABLE Person (
     email TEXT NOT NULL
 );
  
-
-
+ CREATE TABLE Employee (
+    vat INTEGER PRIMARY KEY REFERENCES Person,
+    ein INTEGER NOT NULL, 
+    shop INTEGER NOT NULL REFERENCES Shop
+);
 
 CREATE TABLE Client (
     username TEXT PRIMARY KEY,
     password TEXT,
     vat INTEGER ,
     address_ TEXT NOT NULL
-    /*delivery_center INTEGER NOT NULL REFERENCES DeliveryCenter*/
 );
- 
- 
-CREATE TABLE Employee (
-    vat INTEGER PRIMARY KEY REFERENCES Person,
-    ein INTEGER NOT NULL, 
-    shop INTEGER NOT NULL REFERENCES Shop
-);
- 
  
 CREATE TABLE Shop (
-    id INTEGER PRIMARY KEY,
+    name TEXT PRIMARY KEY,
     address_ TEXT NOT NULL, 
-    email TEXT NOT NULL,
-    reparation INTEGER NOT NULL REFERENCES Reparation
+    email TEXT NOT NULL
 );
  
  CREATE TABLE Purchase (
@@ -84,15 +87,12 @@ CREATE TABLE Product (
     price FLOAT NOT NULL
     
 );
-
-
  
 CREATE TABLE DeliveryCenter (
     id INTEGER PRIMARY KEY,
     name_ TEXT NOT NULL UNIQUE,
     address_ TEXT NOT NULL UNIQUE 
 );
- 
  
 CREATE TABLE Reparation (
     id INTEGER PRIMARY KEY,
@@ -112,21 +112,11 @@ CREATE TABLE ReparationFacility (
     reparation INTEGER NOT NULL REFERENCES Reparation,
     PRIMARY KEY(facility, reparation)
 );
-
-
- 
  
 CREATE TABLE Facility (
     id INTEGER PRIMARY KEY,
     address_ TEXT NOT NULL UNIQUE
-);
-
-CREATE TABLE PurchaseShop (
-    shop TEXT NOT NULL REFERENCES Shop,
-    purchase INTEGER NOT NULL REFERENCES Purchase,
-    PRIMARY KEY(shop, purchase)
-);
- 
+); 
  
 CREATE TABLE Favorites (
     username TEXT,
@@ -134,6 +124,14 @@ CREATE TABLE Favorites (
     PRIMARY KEY (username, id),
     FOREIGN KEY (username) REFERENCES Users(username),
     FOREIGN KEY (id) REFERENCES Product(id)
+);
+
+
+
+CREATE TABLE PurchaseShop (
+    shop TEXT NOT NULL REFERENCES Shop,
+    purchase INTEGER NOT NULL REFERENCES Purchase,
+    PRIMARY KEY(shop, purchase)
 );
 
 
