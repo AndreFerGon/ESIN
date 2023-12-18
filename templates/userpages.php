@@ -11,7 +11,7 @@
             <li><a href="#">Personal Area</a></li>
             <li><a href="myorders.php">My Orders</a></li>
             <li><a href="#">My Returns</a></li>
-            <li><a href="Repairs.php">My Repairs</a></li>
+            <li><a href="repairs.php">My Repairs</a></li>
         </ul>
     </div>
 </body>

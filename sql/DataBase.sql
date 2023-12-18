@@ -97,19 +97,30 @@ CREATE TABLE DeliveryCenter (
 CREATE TABLE Reparation (
     id INTEGER PRIMARY KEY,
     date_ TEXT NOT NULL,
-    facility INTEGER NOT NULL REFERENCES Facility 
+    client TEXT NOT NULL REFERENCES Client, 
+    status TEXT NOT NULL DEFAULT 'Evaluating',
+    device_type TEXT NOT NULL,
+    brand TEXT NOT NULL,
+    serial_number TEXT NOT NULL,
+    reported_issue TEXT NOT NULL,
+    budget INTEGER NOT NULL,
+    shipping_code INTEGER NOT NULL
 );
+
+CREATE TABLE ReparationFacility (
+    facility INTEGER NOT NULL REFERENCES Facility,
+    reparation INTEGER NOT NULL REFERENCES Reparation,
+    PRIMARY KEY(facility, reparation)
+);
+
+
  
  
 CREATE TABLE Facility (
     id INTEGER PRIMARY KEY,
     address_ TEXT NOT NULL UNIQUE
 );
- 
- 
- 
- 
- 
+
 CREATE TABLE PurchaseShop (
     shop TEXT NOT NULL REFERENCES Shop,
     purchase INTEGER NOT NULL REFERENCES Purchase,
@@ -117,14 +128,6 @@ CREATE TABLE PurchaseShop (
 );
  
  
-CREATE TABLE ReparationFacility (
-    facility INTEGER NOT NULL REFERENCES Facility,
-    reparation INTEGER NOT NULL REFERENCES Reparation,
-    budget INTEGER NOT NULL CHECK (budget IS NULL OR budget > 0),
-    PRIMARY KEY(facility, reparation)
-);
-
-
 CREATE TABLE Favorites (
     username TEXT,
     id INTEGER,
@@ -166,3 +169,7 @@ INSERT INTO Product (category, model, price, specs) VALUES (4, 'Rato Gaming Raze
 INSERT INTO Product (category, model, price, specs) VALUES (4, 'Rato Bluetooth Logitech MX Master 3S', '99.99', 'Graphite');
 INSERT INTO Product (category, model, price, specs) VALUES (4, 'Teclado Bluetooth Ewent Slim', '19.99', 'PT- Prateado');
 INSERT INTO Product (category, model, price, specs) VALUES (4, 'Teclado Gaming Razer Huntsman Mini RGB', '99.99', 'Red Switches - Branco');
+
+INSERT INTO Facility (id, address_) VALUES (1, 'Porto');
+INSERT INTO Facility (id, address_) VALUES (2, 'Lisboa');
+INSERT INTO Facility (id, address_) VALUES (3, 'Faro');

@@ -1,144 +1,154 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Repair</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        form {
-            max-width: 600px;
-            margin: 20px 0;
-        }
-        .no-repair-message {
-            font-style: italic;
-            color: #888;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Repairs</title>
 </head>
+
 <body>
 
-<h1>Products under Repair</h1>
+    <section id="repairs">
+        <h2>Repairs</h2>
 
-<div id="noRepairMessage" class="no-repair-message">
-    Nenhuma reparação em curso.
-</div>
+        <!-- Display Reparation Information -->
+        <?php
+        try {
+            $dbh = new PDO('sqlite:sql/DataBase.db');
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-<table id="productTable" style="display: none;">
-    <tr>
-        <th>Device Type</th>
-        <th>Brand</th>
-        <th>Serial Number</th>
-        <th>Reported Issue</th>
-        <th>Shipping Code</th>
-        <th>Status</th>
-    </tr>
-    <!-- The table will be dynamically filled with JavaScript -->
-</table>
-
-<button onclick="openForm()">Create Repair</button>
-
-<div id="repairForm" style="display: none;">
-    <h2>Repair Form</h2>
-    <form id="reparationForm">
-        <label for="deviceType">Device Type:</label>
-        <input type="text" id="deviceType" name="deviceType" required><br>
-
-        <label for="brand">Brand:</label>
-        <input type="text" id="brand" name="brand" required><br>
-
-        <label for="serialNumber">Serial Number:</label>
-        <input type="text" id="serialNumber" name="serialNumber" required><br>
-
-        <label for="issue">Reported Issue:</label>
-        <input type="text" id="issue" name="issue" required><br>
-
-        <input type="hidden" id="code" name="code">
-
-        <input type="submit" value="Submit">
-    </form>
-</div>
-
-<script>
-    function openForm() {
-        document.getElementById("repairForm").style.display = "block";
-        generateCode();
-    }
-
-    function generateCode() {
-        const randomCode = Math.floor(1000 + Math.random() * 9000);
-        document.getElementById("code").value = randomCode;
-    }
-
-    document.getElementById("reparationForm").addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const deviceType = document.getElementById("deviceType").value;
-        const brand = document.getElementById("brand").value;
-        const serialNumber = document.getElementById("serialNumber").value;
-        const issue = document.getElementById("issue").value;
-        const code = document.getElementById("code").value;
-
-        const table = document.getElementById("productTable").getElementsByTagName('tbody')[0];
-        const newRow = table.insertRow(table.rows.length);
-
-        const cells = [deviceType, brand, serialNumber, issue, code, "Under Repair"];
-
-        for (let i = 0; i < cells.length; i++) {
-            const cell = newRow.insertCell(i);
-            cell.innerHTML = cells[i];
+            if (isset($_SESSION['user_id'])) {
+                $user_id = $_SESSION['user_id'];
+            
+                $stmt_client = $dbh->prepare('SELECT username FROM Client WHERE username = ?');
+                $stmt_client->execute([$user_id]);
+                $client_id = $stmt_client->fetchColumn();
+            
+                // Check if the user has any repairs
+                $stmt_check_repairs = $dbh->prepare('SELECT COUNT(*) FROM Reparation WHERE client = ?');
+                $stmt_check_repairs->execute([$client_id]);
+                $has_repairs = $stmt_check_repairs->fetchColumn();
+            
+                if ($has_repairs) {
+                    $stmt = $dbh->prepare('SELECT Reparation.id, Reparation.date_, Reparation.device_type, Reparation.brand, Reparation.serial_number, Reparation.reported_issue, Reparation.budget, ReparationFacility.facility, Reparation.status, Reparation.shipping_code, Facility.address_
+                                        FROM Reparation
+                                        LEFT JOIN ReparationFacility ON Reparation.id = ReparationFacility.reparation
+                                        LEFT JOIN Facility ON ReparationFacility.facility = Facility.id
+                                        WHERE Reparation.client = ?
+                                        ORDER BY Reparation.id ASC');
+                    $stmt->execute([$client_id]);
+                    $repairs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+                    if ($repairs) {
+                        echo '<table border="1">';
+                        echo '<tr><th>ID</th><th>Date</th><th>Device Type</th><th>Brand</th><th>Serial Number</th><th>Reported Issue</th><th>Budget</th><th>Shipping Code</th><th>Facility</th><th>Status</th></tr>';
+                        foreach ($repairs as $repair) {
+                            echo '<tr>';
+                            echo '<td>' . $repair['id'] . '</td>';
+                            echo '<td>' . $repair['date_'] . '</td>';
+                            echo '<td>' . $repair['device_type'] . '</td>';
+                            echo '<td>' . $repair['brand'] . '</td>';
+                            echo '<td>' . $repair['serial_number'] . '</td>';
+                            echo '<td>' . $repair['reported_issue'] . '</td>';
+                            echo '<td>' . $repair['budget'] . '</td>';
+                            echo '<td>' . $repair['shipping_code'] . '</td>';
+                            echo '<td>' . $repair['address_'] . '</td>'; // Displaying the address instead of id
+                            echo '<td>' . $repair['status'] . '</td>';
+                            echo '</tr>';
+                        }
+                        echo '</table>';
+                    } else {
+                        echo '<p>No repairs found for the user.</p>';
+                    }
+                } else {
+                    echo '<p>No repairs found for the user.</p>';
+                }
+            } else {
+                echo '<p>User not logged in.</p>';
+            }
+            
+            
+            
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
         }
+        ?>
 
-        document.getElementById("reparationForm").reset();
-        document.getElementById("repairForm").style.display = "none";
+        <!-- Create Repair Form -->
+        <h3>Create Repair</h3>
+        <form action="process_repair.php" method="post">
+            <!-- Automatically set the "Date" field to the current date and time -->
+            <?php
+            $currentDate = date('Y-m-d');
+            echo '<input type="hidden" id="date" name="date" value="' . $currentDate . '">';
+            ?>
 
-        checkForRepair(); // Chama a função para verificar se há reparação
-    });
+            <!-- Automatically fetch the client for the currently signed-in user -->
+            <?php
+            if (isset($_SESSION['user_id'])) {
+                $user_id = $_SESSION['user_id'];
 
-    // Verifica se há reparação ao carregar a página
-    window.onload = function () {
-        checkForRepair();
-    };
+                $stmt_client = $dbh->prepare('SELECT username FROM Client WHERE username = ?');
+                $stmt_client->execute([$user_id]);
+                $client_id = $stmt_client->fetchColumn();
 
-    function checkForRepair() {
-        const table = document.getElementById("productTable").getElementsByTagName('tbody')[0];
-        const rowCount = table.rows.length;
+                // Set the client_id as the value for the "Client" field
+                echo '<input type="hidden" id="client" name="client" value="' . $client_id . '">';
+            }
+            ?>
 
-        if (rowCount === 0) {
-            // Se não houver reparação, exibe a mensagem e esconde a tabela
-            document.getElementById("noRepairMessage").style.display = "block";
-            document.getElementById("productTable").style.display = "none";
-        } else {
-            // Se houver reparação, esconde a mensagem e exibe a tabela
-            document.getElementById("noRepairMessage").style.display = "none";
-            document.getElementById("productTable").style.display = "table";
-        }
-    }
-</script>
-<?php
+            <label for="device_type">Device Type</label>
+            <input type="text" id="device_type" name="device_type" placeholder="Device Type" required>
+
+            <label for="brand">Brand</label>
+            <input type="text" id="brand" name="brand" placeholder="Brand" required>
+
+            <label for="serial_number">Serial Number</label>
+            <input type="text" id="serial_number" name="serial_number" placeholder="Serial Number" required>
+
+            <label for="reported_issue">Reported Issue</label>
+            <input type="text" id="reported_issue" name="reported_issue" placeholder="Reported Issue" required>
+
+            <label for="budget">Budget</label>
+            <input type="text" id="budget" name="budget" placeholder="Budget" required>
+
+            <?php
+            $shipping_code = mt_rand(1000, 9999);
+            echo '<input type="hidden" id="shipping_code" name="shipping_code" value="' . $shipping_code . '">';
+            ?>
+
+            <!-- Display the "Facility" dropdown -->
+            <label for="facility">Facility</label>
+            <select name="facility">
+                <?php
+                // Fetch facilities from the Facility table
+                $stmt_facilities = $dbh->query('SELECT * FROM Facility');
+                $facilities = $stmt_facilities->fetchAll(PDO::FETCH_ASSOC);
+
+                foreach ($facilities as $facility) {
+                    echo '<option value="' . $facility['id'] . '">' . $facility['address_'] . '</option>';
+                }
+                ?>
+            </select>
+
+            <!-- Include a hidden input for the facility ID -->
+            <input type="hidden" id="facility_id" name="facility_id" value="">
+
+            <button type="submit">Create Repair</button>
+        </form>
+
+    </section>
+
+    <?php
     include_once('templates/header&navmenu.php');
     include_once('templates/footer.php');
-    include_once('templates/userpages.php');
     ?>
+
 </body>
 
 </html>
