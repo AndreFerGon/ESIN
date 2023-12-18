@@ -24,8 +24,8 @@ try {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Orders</title>
-    <style>
+    
+        <style>
         table {
             width: 100%;
             
@@ -41,13 +41,17 @@ try {
     </style>
 </head>
 <body>
+
     <?php
     include_once('templates/header&navmenu.php');
     ?>
+    
+        
+    
 
     <section>
         <h2>My Orders</h2>
-
+        Click on the PurchaseID to see its contents or to return a product.
         <?php
         if ($userPurchases) {
             echo '<table>';

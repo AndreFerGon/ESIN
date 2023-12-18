@@ -17,18 +17,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_GET['purchase_id']) && !empty($_GET['purchase_id'])) {
             $purchase_id = $_GET['purchase_id'];
 
-            // Insert a new row into the Return table
-            $insertReturnQuery = "INSERT INTO Return (date_, purchase_number, product_id, quantity)
-                                  VALUES (:date_, :purchase_number, :product_id, :quantity)";
-            $stmt = $dbh->prepare($insertReturnQuery);
-            $stmt->bindParam(':date_', date('Y-m-d'), PDO::PARAM_STR);
-            $stmt->bindParam(':purchase_number', $purchase_id, PDO::PARAM_INT);  
-            $stmt->bindParam(':product_id', $product_id, PDO::PARAM_INT);
-            $stmt->bindParam(':quantity', $quantity, PDO::PARAM_INT);
-            $stmt->execute();
+            // Check if the product has already been returned for this purchase
+            $stmt_check_return = $dbh->prepare('SELECT COUNT(*) FROM Return WHERE purchase_number = ? AND product_id = ?');
+            $stmt_check_return->execute([$purchase_id, $product_id]);
+            $already_returned = $stmt_check_return->fetchColumn();
 
-            header("Location: Home.php");
-            exit();
+            if ($already_returned) {
+                // Redirect to error.php if the product has already been returned
+                header("Location: error.php?message=Product%20already%20returned");
+                exit();
+            } else {
+                // Insert a new row into the Return table
+                $insertReturnQuery = "INSERT INTO Return (date_, purchase_number, product_id, quantity)
+                                      VALUES (:date_, :purchase_number, :product_id, :quantity)";
+                $stmt = $dbh->prepare($insertReturnQuery);
+                $stmt->bindParam(':date_', date('Y-m-d H:i:s'), PDO::PARAM_STR);
+                $stmt->bindParam(':purchase_number', $purchase_id, PDO::PARAM_INT);  
+                $stmt->bindParam(':product_id', $product_id, PDO::PARAM_INT);
+                $stmt->bindParam(':quantity', $quantity, PDO::PARAM_INT);
+                $stmt->execute();
+
+                // Redirect to return.php after processing the return
+                header("Location: return.php");
+                exit(); // Ensure that no further code is executed after the redirection
+            }
         } else {
             echo "Error: Missing or invalid purchase_id parameter.";
         }

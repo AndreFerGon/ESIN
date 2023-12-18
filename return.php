@@ -15,7 +15,8 @@ try {
         $stmt_returns = $dbh->prepare('SELECT Return.id, Return.date_, Return.purchase_number, Return.product_id, Return.quantity, Product.model
                                        FROM Return
                                        JOIN Product ON Return.product_id = Product.id
-                                       WHERE Return.purchase_number IN (SELECT number_ FROM Purchase WHERE client = ?)');
+                                       JOIN Purchase ON Return.purchase_number = Purchase.number_
+                                       WHERE Purchase.client = ?');
         $stmt_returns->execute([$user_id]);
         $returns = $stmt_returns->fetchAll(PDO::FETCH_ASSOC);
 
@@ -33,12 +34,15 @@ try {
                 echo '</tr>';
             }
             echo '</table>';
+
+            
         } else {
             echo '<p>No returns found for the user.</p>';
         }
     } else {
         echo '<p>User not logged in.</p>';
     }
+    echo '<a href="myorders.php" class="return-button">Return a Product</a>';
 } catch (PDOException $e) {
     echo 'Error: ' . $e->getMessage();
 } finally {
@@ -49,3 +53,4 @@ try {
 include_once('templates/header&navmenu.php');
 include_once('templates/footer.php');
 ?>
+

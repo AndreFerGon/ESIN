@@ -41,7 +41,7 @@ try {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Order Details</title>
+    
     <style>
         table {
             width: 100%;
