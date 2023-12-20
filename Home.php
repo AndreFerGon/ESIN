@@ -40,7 +40,7 @@ try {
    <body>   
     <div id="content">
     <div id=promo>
-    <img src="images/promoção.png" alt="Advertisement" />
+    <img src="images/promo.jpeg" alt="promo" />
     </div>
         
     <div class="list">

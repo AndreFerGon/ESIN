@@ -10,13 +10,16 @@ $userLoggedIn = isset($_SESSION['user_id']);
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Technology Store</title>
+    <title>iTEC</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="positions.css" />
+    
 </head>
+
+
 <body>
     <header>
-        <h1>  iTEC</h1>
+        <h1> <img src="images/logo.png" alt="logo">   </h1>
 
         
         <?php if ($userLoggedIn) { ?>
