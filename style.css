@@ -1044,7 +1044,7 @@ button:hover {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #3a70a7;
   text-align: center;
-  height: 20px;
+  height: 45px;
 }
 
 /* repairs.css */
@@ -1225,7 +1225,7 @@ margin-top: 20px;
 }
 
 #repairs th, #repairs td {
-border: 1px solid #ddd;
+border: 10px solid #ddd;
 padding: 10px;
 text-align: left;
 }
@@ -1243,14 +1243,15 @@ margin-top: 20px;
 }
 
 #create-repair-form h3 {
-color: #3a70a7;
+  color: #3a70a7;
+  margin-bottom: 10px; /* Adiciona espaço na parte inferior do título */
 }
 
 #create-repair-form form {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-gap: 10px;
-margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
 }
 
 #create-repair-form label {
