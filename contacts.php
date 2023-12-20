@@ -1,5 +1,4 @@
 <?php
-// Home.php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -7,15 +6,13 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Add your CSS styles here */
-  </style>
 </head>
 <body>
 
   <div id="contacts">
     <div id="title">
       <h2>Contact iTEC - We are here for you!</h2>
+      
       <p>
         At iTEC, we value open communication and are always available to address your questions, concerns, or feedback.
         Your experience is our priority, and we want to ensure that you receive the necessary support whenever you need it.
@@ -66,6 +63,12 @@ session_start();
 
     <div id="contact-form">
       <h3>Customer Support: Contact Form</h3>
+      <?php
+      if (isset($_SESSION['success_message'])) {
+          echo '<p style="color: green;">' . $_SESSION['success_message'] . '</p>';
+          unset($_SESSION['success_message']);
+      }
+      ?>
       <form action="process_form.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>

@@ -13,6 +13,7 @@ DROP TABLE IF EXISTS ReparationFacility;
 DROP TABLE IF EXISTS Favorites;
 DROP TABLE IF EXISTS Return;
 DROP TABLE IF EXISTS Purchase_Products;
+DROP TABLE IF EXISTS user_messages;
  
 
  CREATE TABLE Return (
@@ -91,6 +92,15 @@ CREATE TABLE Favorites (
     PRIMARY KEY (username, id),
     FOREIGN KEY (username) REFERENCES Users(username),
     FOREIGN KEY (id) REFERENCES Product(id)
+);
+
+CREATE TABLE user_messages (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username NOT NULL,
+    name NOT NULL,
+    email NOT NULL,
+    message TEXT NOT NULL,
+    submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 

@@ -43,20 +43,7 @@ session_start();
       <p>
         If you have any questions or concerns, please contact us. We are here to help!
       </p>
-      <p>
-      <form action="process_form.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        
-        <input type="submit" value="Submit">
-      </form>
-      </p>   
+      <p><a href="contacts.php">Contacts</a></p>  
     </div> 
     </div> 
    
