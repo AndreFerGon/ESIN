@@ -1047,3 +1047,349 @@ button:hover {
   height: 20px;
 }
 
+/* repairs.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#header-nav {
+  background-color: #3a70a7;
+  color: #fff;
+  padding: 10px 0;
+}
+
+#orders {
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#orders h2 {
+  color: #3a70a7;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+#user-pages,
+#footer {
+  margin-top: 20px;
+  background-color: #3a70a7;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/* order_details.css */
+
+body {
+font-family: 'Arial', sans-serif;
+color: #333;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+}
+
+.container {
+width: 80%;
+margin: 0 auto;
+}
+
+#header-nav {
+background-color: #3a70a7;
+color: #fff;
+padding: 10px 0;
+}
+
+section {
+margin-top: 20px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+margin: 0 auto;
+}
+
+section h2 {
+color: #3a70a7;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+th, td {
+padding: 10px;
+text-align: left;
+}
+
+img {
+max-width: 100px;
+height: auto;
+}
+
+form {
+display: inline;
+}
+
+button {
+background-color: #3a70a7;
+color: #fff;
+padding: 5px 10px;
+border: none;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #8bc6f6;
+}
+
+/* repairs.css */
+
+body {
+font-family: 'Arial', sans-serif;
+color: #333;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+}
+
+.container {
+width: 80%;
+margin: 0 auto;
+}
+
+#header-nav {
+background-color: #3a70a7;
+color: #fff;
+padding: 10px 0;
+}
+
+#repairs {
+margin-top: 20px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+margin: 0 auto;
+}
+
+#repairs h2 {
+color: #3a70a7;
+}
+
+#repairs table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+#repairs th, #repairs td {
+border: 1px solid #ddd;
+padding: 10px;
+text-align: left;
+}
+
+#repairs th {
+background-color: #f2f2f2;
+}
+
+#repairs tr:hover {
+background-color: #f5f5f5;
+}
+
+#create-repair-form {
+margin-top: 20px;
+}
+
+#create-repair-form h3 {
+color: #3a70a7;
+}
+
+#create-repair-form form {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 10px;
+margin-top: 10px;
+}
+
+#create-repair-form label {
+font-weight: bold;
+}
+
+#create-repair-form input,
+#create-repair-form select {
+width: 100%;
+padding: 8px;
+margin-bottom: 10px;
+box-sizing: border-box;
+}
+
+#create-repair-form button {
+background-color: #3a70a7;
+color: #fff;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+}
+
+#create-repair-form button:hover {
+background-color: #8bc6f6;
+}
+
+.return-button {
+display: inline-block;
+background-color: #3a70a7;
+color: #fff;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+margin-top: 20px;
+}
+
+.return-button:hover {
+background-color: #8bc6f6;
+}
+
+/* return.css */
+
+#returns {
+margin-top: 20px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+margin: 0 auto;
+}
+
+#returns h2 {
+color: #3a70a7;
+}
+
+#returns table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+#returns th, #returns td {
+border: 1px solid #ddd;
+padding: 10px;
+text-align: left;
+}
+
+#returns th {
+background-color: #f2f2f2;
+}
+
+#returns tr:hover {
+background-color: #f5f5f5;
+}
+
+.return-button {
+display: inline-block;
+background-color: #3a70a7;
+color: #fff;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+margin-top: 20px;
+}
+
+.return-button:hover {
+background-color: #8bc6f6;
+}
+
+/* user.css */
+
+body {
+font-family: 'Arial', sans-serif;
+color: #333;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+}
+
+.container {
+width: 80%;
+margin: 0 auto;
+}
+
+#header-nav {
+background-color: #3a70a7;
+color: #fff;
+padding: 10px 0;
+}
+
+#user_profile {
+margin-top: 20px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+text-align: center;
+}
+
+#user_profile h2 {
+color: #3a70a7;
+}
+
+#user_profile p {
+margin-bottom: 15px;
+}
+
+#user_profile img {
+width: 100px; /* Ajuste o tamanho conforme necessário */
+border-radius: 50%; /* Adiciona cantos arredondados para uma aparência mais suave */
+margin-bottom: 15px;
+}
+
+#user_profile p:last-child {
+margin-bottom: 0;
+}
+
+#user-pages,
+#footer {
+margin-top: 20px;
+background-color: #3a70a7;
+color: #fff;
+padding: 10px 0;
+}
