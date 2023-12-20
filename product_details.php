@@ -48,7 +48,9 @@ if ($userLoggedIn && isset($_POST['favorite_submit'])) {
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
-   </head>
+     
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
 <body>
 
 <section id="product-details">

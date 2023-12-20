@@ -9,7 +9,8 @@ session_start();
   <link rel="stylesheet" href="styles.css"> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legal Information</title>
+      
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 
 <body>

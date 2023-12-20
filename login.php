@@ -35,7 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="en">
-
+<head>       
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
 <body>
     <div id=login>
         <h2>Login</h2>

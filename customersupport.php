@@ -4,6 +4,9 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<head>       
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
   <body>
     <div id="customer-support">
     <div id="title_costumer_support">

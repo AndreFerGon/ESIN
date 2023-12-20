@@ -3,6 +3,9 @@
 ?>
 
 <!DOCTYPE html>
+<head>       
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

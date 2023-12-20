@@ -16,9 +16,9 @@ $userLoggedIn = isset($_SESSION['user_id']);
 <body>
     <header>
         <h1> 
-        <a id="logo" href="Home.php">
-                  <img src="images/logo.png" alt="logo">        
-        </a>    
+            <a id="logo" href="Home.php">
+                    <img src="images/logo.png" alt="logo">        
+            </a>    
         </h1>
 
         

@@ -25,8 +25,9 @@ try {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Orders</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
 
