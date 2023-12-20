@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <body>
+  
     <div id="footer">
       <span class="author">&copy; iTEC 2023</span>
     </div>
-    <body>
+
+    <style>    
+
+    #footer {
+        
+        padding: 10px;
+        text-align: center;
+        margin-top: auto;
+    }
+</style>
+ 
 <html>
 
