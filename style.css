@@ -144,10 +144,9 @@ h1 {
 }
 
 .list article {
-  width: 45%; 
+  width: 40%; 
   margin-bottom: 20px;
   box-sizing: border-box;
-   
 }
 
 .list a {
@@ -159,10 +158,12 @@ h1 {
 }
 
 .list img {
-  display: block;
-  margin: 0 auto; 
+  display: block; 
+  width: 80%; 
+  margin: 0 auto;
   margin-top: 10px;
 }
+
 
 #informations {
 font-family: 'Arial', sans-serif;
