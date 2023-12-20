@@ -1,15 +1,15 @@
 <?php
 
-
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     try {
+        
         $dbh = new PDO('sqlite:sql/DataBase.db');
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-       
+        
         $product_id = $_POST['product_id'];
         $quantity = $_POST['quantity'];
 
@@ -39,14 +39,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 
                 header("Location: return.php");
-                exit(); 
+                exit();
+            }
         } else {
-            echo "Error: Missing or invalid purchase_id parameter.";
+
+            header("Location: error.php?message=Purchase%20ID%20not%20provided");
+            exit();
         }
     } catch (PDOException $e) {
+        
         echo "Error: " . $e->getMessage();
     } finally {
-       
+        
         $dbh = null;
     }
 }
