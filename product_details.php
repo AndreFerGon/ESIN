@@ -57,7 +57,7 @@ if ($userLoggedIn && isset($_POST['favorite_submit'])) {
         <h2><?php echo $product_details['model']; ?></h2>
         <img src="images/products/<?php echo $product_details['id']; ?>.png" alt="<?php echo $product_details['model']; ?>">
         <p><?php echo $product_details['specs']; ?></p>
-        <p>Price: <?php echo $product_details['price']; ?></p>
+        <p>Price: <?php echo $product_details['price']. ' €'; ?></p>
 
         <?php if ($userLoggedIn) { ?>
             <form action="addtocart.php" method="post">
@@ -69,17 +69,14 @@ if ($userLoggedIn && isset($_POST['favorite_submit'])) {
 </form>
 
             <form action="" method="post">
-                <button type="submit" name="favorite_submit" > <!-- Assuming favorite_submit handles favorite logic -->
-                    <img id="favoriteImg" src="images/favorite1.png" alt="Favorite">
+                <button type="submit" name="favorite_submit" >Add to favorites 
                 </button>
                 <p id="debugMessage"><?php echo isset($debug_message) ? $debug_message : ''; ?></p>
             </form>
         <?php } else { ?>
             <form id="loginForm" action="Login.php" method="post">
                 <button type="button" onclick="redirectToLogin()">Add to cart</button>
-                <button type="button" onclick="redirectToLogin()">
-                    <img id="favoriteImg" src="images/favorite1.png" alt="Favorite">
-                </button>
+                <button type="button" onclick="redirectToLogin()">Add to favorites</button>
             </form>
 
             <script>

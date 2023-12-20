@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 
 <body>
-    <div>
+    <div id=login>
         <h2>Login</h2>
         <?php
         // Display the error message if there is one

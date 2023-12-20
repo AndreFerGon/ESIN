@@ -24,21 +24,9 @@ try {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-        <style>
-        table {
-            width: 100%;
-            
-            margin-top: 20px;
-        }
-
-      
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -49,9 +37,11 @@ try {
         
     
 
-    <section>
+    <section id="orders">
         <h2>My Orders</h2>
-        Click on the PurchaseID to see its contents or to return a product.
+        <p>
+        Click on the Purchase ID to see its contents or to return a product.
+        </p>
         <?php
         if ($userPurchases) {
             echo '<table>';
@@ -81,8 +71,8 @@ try {
     </section>
 
     <?php
+    include_once('templates/userpages.php');
     include_once('templates/footer.php');
-    include_once('templates/bottombanner.php');
     ?>
 </body>
 </html>

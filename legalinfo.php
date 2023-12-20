@@ -4,61 +4,75 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <body>
-    <div id="customer-support">
-      <h2>Legal Information</h2>
-      <p>
-        The company TECHNOLOGY STORE is subject to Portuguese legislation that regulates commercial activities, namely 
-        the Commercial Code and the Consumer Code. In addition, the sale of electronic products and the provision of 
-        repair services must comply with specific regulations to ensure consumer safety and product integrity.
-      </p>
+
+<head>
+  <link rel="stylesheet" href="styles.css"> <!-- Substitua pelo caminho correto do seu arquivo CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Information</title>
+</head>
+
+<body>
+
+  <div id="legal_info">
+    <h2>Legal Information</h2>
+  </div>
+
+  <div id="legal_info_services">
+    <div id="first">
+      <img src="images/eletronic_sales.png" alt="Electronic Sales" />
       <h3>Sale of Electronic Products</h3>
       <p>
-        The company commits to providing detailed information about electronic products for sale, including technical 
-        specifications, warranties, and information on correct usage. All commercial transactions will comply with consumer 
-        protection laws, ensuring transparency and the right to withdrawal.
+        The company commits to providing detailed information about electronic products for sale.
       </p>
+    </div>
+
+    <div id="second">
+      <img src="images/home_delivery.png" alt="Home Delivery" />
       <h3>Home Delivery</h3>
       <p>
-        Within the scope of home delivery services, the company will adhere to the established norms for e-commerce in Portugal. 
-        Delivery times will be clearly communicated to customers, and in the case of delays or issues with delivery, the company 
-        commits to informing and resolving the situation efficiently.
+        Delivery times are communicated to customers, and the company commits to resolve any problem.
       </p>
+    </div>
+
+    <div id="third">
+      <img src="images/technical_assistance.png" alt="Technical Assistance" />
       <h3>Warranty and Technical Assistance</h3>
       <p>
-        All products sold by the company will be covered by a legal warranty. Additionally, the company will provide technical 
-        assistance and repair services for the marketed electronic products. Warranty conditions and procedures for technical 
-        assistance will be properly communicated to customers.
+        All products sold are covered by a legal warranty and provide technical assistance and repair services.
       </p>
+    </div>
+
+    <div id="fourth">
+      <img src="images/returns.png" alt="Returns and Refunds" />
       <h3>Returns and Refunds Policy</h3>
       <p>
-        The company will fully respect return and refund regulations, ensuring customers' right to return defective or unsatisfactory 
-        products, as established in current consumer protection legislation.
+        The company respects return and refund regulations for defective or unsatisfactory products.
       </p>
+    </div>
+
+    <div id="fifth">
+      <img src="images/data_protection.png" alt="Data Protection" />
       <h3>Data Protection</h3>
       <p>
-        The company commits to complying with personal data protection standards, ensuring customer privacy. Collected data will be 
-        used exclusively for commercial and customer support purposes, in accordance with current data protection laws.
+        Collected data are used exclusively for commercial and customer support purposes.
       </p>
-      <h3>Conflict Prevention and Dispute Resolution</h3>
+    </div>
+
+    <div id="sixth">
+      <img src="images/resolution.png" alt="Conflict Resolution" />
+      <h3>Conflict Prevention and Resolution</h3>
       <p>
-        In case of disputes, the company will seek amicable solutions and, if necessary, resort to alternative dispute resolution 
-        methods such as mediation or arbitration, in compliance with applicable legislation.
+        In case of disputes, the company will seek amicable solutions.
       </p>
+    </div>
+  </div>
 
-      <p>
-       TECHNOLOGY STORE commits to operate in accordance with the highest ethical and legal standards, providing customers with a secure, 
-       transparent, and satisfactory shopping experience.
-      </p>
-  
-    </div>  
-   
+  <?php
+  include_once('templates/header&navmenu.php');
+  include_once('templates/footer.php');
+  ?>
 
-    <?php
-   include_once('templates/header&navmenu.php');
-   include_once('templates/footer.php');
-   include_once('templates/bottombanner.php')
-    ?>
+</body>
 
-    </body>
 </html>

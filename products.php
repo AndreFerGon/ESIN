@@ -52,9 +52,9 @@ try {
                 <?php foreach ($products as $row) { ?>
                     <article>
                         <a href="product_details.php?id=<?php echo $row['id']; ?>">
-                            <h3><?php echo $row['model']; ?></h3>                    
                             <img src="images/products/<?php echo $row['id']; ?>.png" alt="A">
-                            <span class="price"><?php echo $row['price']; ?></span>
+                            <h3><?php echo $row['model']; ?></h3>             
+                            <span class="price"><?php echo $row['price']. ' €'; ?></span>       
                         </a>
                    </article>
                 <?php } ?>

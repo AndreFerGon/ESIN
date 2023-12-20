@@ -49,8 +49,9 @@ try {
     // Close the database connection
     $dbh = null;
 }
-
+include_once('templates/userpages.php');
 include_once('templates/header&navmenu.php');
+
 include_once('templates/footer.php');
 ?>
 

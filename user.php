@@ -26,7 +26,7 @@ try {
 
 <body>
 
-    <div>
+    <div id=user_profile>
         <h2>User Profile</h2>
         <p>Welcome, <?php echo $_SESSION['user_id']; ?>!</p>
 

@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
   <body>
-  <section>
+  <section id='checkout'>
         <h2>Checkout</h2>
 
         <?php
@@ -74,7 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php
    include_once('templates/header&navmenu.php');
    include_once('templates/footer.php');
-   include_once('templates/bottombanner.php')
     ?>
 
     </body>

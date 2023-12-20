@@ -1,4 +1,4 @@
-<section>
+<section id='shopping-cart'>
   <h2>Shopping Cart</h2>
 
   <?php if (!isset($_SESSION['cart']) || count($_SESSION["cart"]) == 0) { ?>
@@ -29,8 +29,8 @@
           <?php } ?>
       </table>
 
-      <p>Total: <?php echo $totalPrice ?></p>
-
+      <p>Total: <?php echo $totalPrice. ' €'; ?></p>
+     
       <form action="Check-out.php">
           <button>Checkout</button>
       </form>

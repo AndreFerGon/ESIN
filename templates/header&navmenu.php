@@ -13,16 +13,10 @@ $userLoggedIn = isset($_SESSION['user_id']);
     <title>Technology Store</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="positions.css" />
-    <style>
-        #cart img, #user img, #favorites img{
-            width: 50px; /* Adjust the width as needed */
-            height: auto; /* Maintain aspect ratio */
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Technology</h1>
+        <h1>  iTEC</h1>
 
         
         <?php if ($userLoggedIn) { ?>
@@ -66,7 +60,7 @@ $userLoggedIn = isset($_SESSION['user_id']);
                             Logout                                    
                         </a>
                     <?php } else { ?>
-                        <a id="login" href="login.php">
+                        <a id="login_button" href="login.php">
                             Login / Register
                         </a>
                     <?php } ?>

@@ -36,61 +36,30 @@ try {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <style>
-            /* Add these styles directly in the head section */
-            #content {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            
-            .list {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-
-            article {
-                width: 48%;
-                margin-bottom: 20px;
-            }
-
-            article a {
-                display: flex;
-                flex-direction: column;              
-            }
-          
-            article img {
-                max-width: 100%;
-                border-radius: 30%;
-            }
-
-            
-        </style>
    </head>
    <body>   
     <div id="content">
+    <div id=promo>
     <img src="images/promoção.png" alt="Advertisement" />
-        
-        <div class="list">
-            <?php if ($error_msg == null) { ?>
-                <?php foreach ($firstProducts as $category_id => $product) { ?>
-                    <?php if ($product !== false) { ?>
-                        <article style="width: 40%; margin-bottom: 30px;">
-                            <a href="product_details.php?id=<?php echo $product['id']; ?>">                 
-                                <img src="images/products/<?php echo $product['id']; ?>.png" alt="Product Image" style="border-radius: 30%" >
-                                <?php echo $product['model']; ?>
-                            </a>
-                        </article>
-                    <?php } ?>
-                <?php } ?>
-            <?php } else {
-                echo $error_msg;
-            } ?>
-        </div>
-        
     </div>
+        
+    <div class="list">
+    <?php if ($error_msg == null) { ?>
+        <?php foreach ($firstProducts as $category_id => $product) { ?>
+            <?php if ($product !== false) { ?>
+                <article>
+                    <a href="product_details.php?id=<?php echo $product['id']; ?>">                 
+                        <img class="image" src="images/products/<?php echo $product['id']; ?>.png" alt="Product Image">
+                        <?php echo $product['model']; ?>
+                    </a>
+                </article>
+            <?php } ?>
+        <?php } ?>
+    <?php } else {
+        echo $error_msg;
+    } ?>
+</div>
+</div>
   
     <?php
     include_once('templates/header&navmenu.php');

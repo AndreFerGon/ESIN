@@ -113,7 +113,6 @@ try {
 
     <?php
     include_once('templates/footer.php');
-    include_once('templates/bottombanner.php');
     ?>
 </body>
 </html>

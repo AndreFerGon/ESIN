@@ -7,7 +7,9 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <style>
+    /* Add your CSS styles here */
+  </style>
 </head>
 <body>
 
@@ -20,7 +22,7 @@ session_start();
         Below, you'll find all the contact information to connect with us.
       </p>
       <div id="map">
-      <img src="images/mapa.png" alt="map">
+        <img src="images/mapa.png" alt="map">
       </div>
     </div>
 
@@ -31,7 +33,7 @@ session_start();
           Rua da Fábica, 123
         </p>
         <p>
-           Postal Code 56789-012
+          Postal Code 56789-012
         </p>
         <p>
           Porto, Portugal
@@ -61,22 +63,22 @@ session_start();
         </p>
       </div>
     </div>
-  </div>
 
-  <div id="contact-form">
-    <h3>Customer Support: Contact Form</h3>
-    <form action="process_form.php" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <input type="submit" value="Submit">
-    </form>
+    <div id="contact-form">
+      <h3>Customer Support: Contact Form</h3>
+      <form action="process_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </div>
 
   <?php
