@@ -971,15 +971,6 @@ a:hover {
   color: #82add8;
 }
 
-#repairs {
-  width: 80;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -996,7 +987,7 @@ th, td {
 }
 
 #repairs  {
-  width: 80%;
+  width: 95%;
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
@@ -1006,7 +997,7 @@ th, td {
 form {
   margin-top: 20px;
   text-align: left;
-  width: 100%; /* Set the width to 100% */
+  width: 100%; 
 }
 
 label {
@@ -1055,6 +1046,8 @@ button:hover {
 /*footer layout*/
 
 #footer {
+  position:fixed;
+  bottom:0;
   width: 100%;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
