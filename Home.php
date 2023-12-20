@@ -31,8 +31,9 @@ try {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   </head>
+<head>       
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
    <body>   
     <div id="content">
     <div id=promo>

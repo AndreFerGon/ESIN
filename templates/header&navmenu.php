@@ -9,13 +9,17 @@ $userLoggedIn = isset($_SESSION['user_id']);
     <meta charset="utf-8" />
     <title>iTEC</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="positions.css" />
-    
+    <link rel="stylesheet" href="positions.css" />    
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 
 <body>
     <header>
-        <h1> <img src="images/logo.png" alt="logo">   </h1>
+        <h1> 
+        <a id="logo" href="Home.php">
+                  <img src="images/logo.png" alt="logo">        
+        </a>    
+        </h1>
 
         
         <?php if ($userLoggedIn) { ?>
