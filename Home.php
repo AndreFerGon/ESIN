@@ -10,21 +10,17 @@ try {
     $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Retrieve all categories
     $stmt_categories = $dbh->prepare('SELECT id, name FROM Category');
     $stmt_categories->execute();
     $categories = $stmt_categories->fetchAll();
 
-    // Array to store the first product from each category
     $firstProducts = array();
 
     foreach ($categories as $category) {
-        // Retrieve the first product for each category
         $stmt_first_product = $dbh->prepare('SELECT * FROM Product WHERE category=? LIMIT 1');
         $stmt_first_product->execute(array($category['id']));
         $firstProduct = $stmt_first_product->fetch();
 
-        // Store the first product in the array
         $firstProducts[$category['id']] = $firstProduct;
     }
 

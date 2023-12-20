@@ -16,7 +16,7 @@ session_start();
     <section id="repairs">
         <h2>Repairs</h2>
 
-        <!-- Display Reparation Information -->
+        
         <?php
         try {
             $dbh = new PDO('sqlite:sql/DataBase.db');
@@ -29,7 +29,7 @@ session_start();
                 $stmt_client->execute([$user_id]);
                 $client_id = $stmt_client->fetchColumn();
             
-                // Check if the user has any repairs
+                
                 $stmt_check_repairs = $dbh->prepare('SELECT COUNT(*) FROM Reparation WHERE client = ?');
                 $stmt_check_repairs->execute([$client_id]);
                 $has_repairs = $stmt_check_repairs->fetchColumn();
@@ -57,7 +57,7 @@ session_start();
                             echo '<td>' . $repair['reported_issue'] . '</td>';
                             echo '<td>' . $repair['budget'] . '</td>';
                             echo '<td>' . $repair['shipping_code'] . '</td>';
-                            echo '<td>' . $repair['address_'] . '</td>'; // Displaying the address instead of id
+                            echo '<td>' . $repair['address_'] . '</td>';
                             echo '<td>' . $repair['status'] . '</td>';
                             echo '</tr>';
                         }
@@ -79,16 +79,16 @@ session_start();
         }
         ?>
 
-        <!-- Create Repair Form -->
+       
         <h3>Create Repair</h3>
         <form action="process_repair.php" method="post">
-            <!-- Automatically set the "Date" field to the current date and time -->
+            
             <?php
             $currentDate = date('Y-m-d');
             echo '<input type="hidden" id="date" name="date" value="' . $currentDate . '">';
             ?>
 
-            <!-- Automatically fetch the client for the currently signed-in user -->
+           
             <?php
             if (isset($_SESSION['user_id'])) {
                 $user_id = $_SESSION['user_id'];
@@ -97,7 +97,7 @@ session_start();
                 $stmt_client->execute([$user_id]);
                 $client_id = $stmt_client->fetchColumn();
 
-                // Set the client_id as the value for the "Client" field
+                
                 echo '<input type="hidden" id="client" name="client" value="' . $client_id . '">';
             }
             ?>
@@ -122,11 +122,11 @@ session_start();
             echo '<input type="hidden" id="shipping_code" name="shipping_code" value="' . $shipping_code . '">';
             ?>
 
-            <!-- Display the "Facility" dropdown -->
+            
             <label for="facility">Facility</label>
             <select name="facility">
                 <?php
-                // Fetch facilities from the Facility table
+                
                 $stmt_facilities = $dbh->query('SELECT * FROM Facility');
                 $facilities = $stmt_facilities->fetchAll(PDO::FETCH_ASSOC);
 
@@ -136,7 +136,7 @@ session_start();
                 ?>
             </select>
 
-            <!-- Include a hidden input for the facility ID -->
+            
             <input type="hidden" id="facility_id" name="facility_id" value="">
 
             <button type="submit">Create Repair</button>

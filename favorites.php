@@ -1,20 +1,17 @@
 <?php
-// Favorites.php
+
 session_start();
 
 try {
     $dbh = new PDO('sqlite:sql/DataBase.db');
     $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Check if the user is logged in
     
-        $user_id = $_SESSION['user_id'];
-
-        // Retrieve the user's favorite products
-        $stmt_favorites = $dbh->prepare('SELECT p.* FROM Favorites f INNER JOIN Product p ON f.id = p.id WHERE f.username = ?');
-        $stmt_favorites->execute(array($user_id));
-        $favorite_products = $stmt_favorites->fetchAll();
+    $user_id = $_SESSION['user_id'];
+      
+    $stmt_favorites = $dbh->prepare('SELECT p.* FROM Favorites f INNER JOIN Product p ON f.id = p.id WHERE f.username = ?');
+    $stmt_favorites->execute(array($user_id));
+    $favorite_products = $stmt_favorites->fetchAll();
     
 } catch (PDOException $e) {
     $error_msg = $e->getMessage();

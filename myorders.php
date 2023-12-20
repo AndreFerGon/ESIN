@@ -2,11 +2,11 @@
 session_start();
 
 try {
-    // Establish SQLite connection
+    
     $dbh = new PDO('sqlite:sql/DataBase.db');
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Query to get user's purchases
+    
     $user_id = $_SESSION['user_id'];
     $getUserPurchasesQuery = "SELECT * FROM Purchase WHERE client = :user_id";
     $stmt = $dbh->prepare($getUserPurchasesQuery);
@@ -16,7 +16,7 @@ try {
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 } finally {
-    // Close the database connection
+   
     $dbh = null;
 }
 ?>
@@ -53,7 +53,7 @@ try {
                   </tr>';
 
             foreach ($userPurchases as $purchase) {
-                // Display information for each purchase in a table row
+                
                 echo '<tr>';
                 echo '<td><a href="order_details.php?purchase_id=' . $purchase['number_'] . '">' . $purchase['number_'] . '</a></td>';
                 echo '<td>' . $purchase['price'] . '</td>';

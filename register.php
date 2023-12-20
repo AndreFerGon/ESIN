@@ -1,33 +1,31 @@
 <?php
-// Home.php
 session_start();
 ?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate and sanitize user input
+    
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-    $password = password_hash(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING), PASSWORD_DEFAULT); // Hash the password
-    $vat = filter_input(INPUT_POST, 'vat', FILTER_VALIDATE_INT); // Assuming vat is an integer
+    $password = password_hash(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING), PASSWORD_DEFAULT); 
+    $vat = filter_input(INPUT_POST, 'vat', FILTER_VALIDATE_INT); 
     $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 
     try {
         $dbh = new PDO('sqlite:sql/DataBase.db');
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Check if a user with the same username or VAT already exists
         $stmt_username = $dbh->prepare('SELECT COUNT(*) FROM Client WHERE username = ?');
         $stmt_username->execute([$username]);
         $username_count = $stmt_username->fetchColumn();
         
         if ($username_count > 0) {
-            // Username already in use, display error message
+            
             $error_msg = 'Username is already in use. Please choose a different username.';
         } else {
-            // Username is not in use, proceed with registration
+            
             $stmt_insert = $dbh->prepare('INSERT INTO Client (username, password, vat, address_) VALUES (?, ?, ?, ?)');
             $stmt_insert->execute([$username, $password, $vat, $address]);
 
-            // Redirect to login page after successful registration
+            
             header('Location: login.php');
             exit();
         }

@@ -5,10 +5,7 @@ try {
     $dbh = new PDO('sqlite:sql/DataBase.db');
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Assuming you have a user authentication mechanism
-    // For example, you can use $_SESSION['user_id'] to identify the logged-in user
-
-    // Fetch returns for the user from the Return table
+    
     if (isset($_SESSION['user_id'])) {
         $user_id = $_SESSION['user_id'];
 
@@ -46,7 +43,7 @@ try {
 } catch (PDOException $e) {
     echo 'Error: ' . $e->getMessage();
 } finally {
-    // Close the database connection
+   
     $dbh = null;
 }
 include_once('templates/userpages.php');

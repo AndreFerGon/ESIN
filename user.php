@@ -1,12 +1,11 @@
 <?php
-// user.php
 session_start();
 
 try {
     $dbh = new PDO('sqlite:sql/DataBase.db');
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Retrieve user information based on the provided username
+    
     $stmt = $dbh->prepare('SELECT address_, vat FROM Client WHERE username = ?');
     $stmt->execute([$_SESSION['user_id']]);
     $userDetails = $stmt->fetch(PDO::FETCH_ASSOC);

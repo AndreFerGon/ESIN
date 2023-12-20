@@ -1,8 +1,5 @@
 <?php
-// Start the session
 session_start();
-
-// Check if the user is logged in (session variable is set)
 $userLoggedIn = isset($_SESSION['user_id']);
 ?>
 
@@ -15,7 +12,6 @@ $userLoggedIn = isset($_SESSION['user_id']);
     <link rel="stylesheet" href="positions.css" />
     
 </head>
-
 
 <body>
     <header>
@@ -36,10 +32,8 @@ $userLoggedIn = isset($_SESSION['user_id']);
                <a id="user" href="user.php">
                    <img src="images/user.png" alt="User">        
                </a>
-        <?php }  ?>
-                        
-        
-        
+        <?php }  ?>                      
+                
     </header>
     <div id="main">
         <div id="nav">

@@ -7,12 +7,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Add your stylesheet link or styles here -->
+       
 </head>
 <body>
     <?php
-    // Include your header and navigation menu if applicable
+    
     include_once('templates/header&navmenu.php');
     ?>
 
@@ -24,7 +23,6 @@
     </section>
 
     <?php
-    // Include your footer if applicable
     include_once('templates/footer.php');
     ?>
 </body>

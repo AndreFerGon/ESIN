@@ -1,19 +1,19 @@
 <?php
 session_start();
 
-// Check if purchase_id is provided in the URL
+
 if (!isset($_GET['purchase_id']) || !is_numeric($_GET['purchase_id'])) {
-    // Redirect to My Orders page if purchase_id is not provided or not valid
+   
     header("Location: myorders.php");
     exit();
 }
 
 try {
-    // Establish SQLite connection
+    
     $dbh = new PDO('sqlite:sql/DataBase.db');
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Get purchase details
+   
     $purchase_id = $_GET['purchase_id'];
     $getPurchaseDetailsQuery = "SELECT * FROM Purchase WHERE number_ = :purchase_id";
     $stmt = $dbh->prepare($getPurchaseDetailsQuery);
@@ -21,7 +21,7 @@ try {
     $stmt->execute();
     $purchaseDetails = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Get products for the current purchase
+  
     $getPurchaseProductsQuery = "SELECT Product.*, Purchase_Products.quantity 
                                  FROM Purchase_Products
                                  JOIN Product ON Purchase_Products.product_id = Product.id
@@ -33,7 +33,7 @@ try {
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 } finally {
-    // Close the database connection
+    
     $dbh = null;
 }
 ?>
@@ -65,14 +65,14 @@ try {
 
         <?php
         if ($purchaseDetails) {
-            // Display purchase details
+            
             
             echo "<p>Total Price: " . $purchaseDetails['price'] . " €</p>";
             echo "<p>Date: " . date('Y-m-d', $purchaseDetails['date_']) . "</p>";
             echo "<p>Delivery Option: " . $purchaseDetails['delivery_option'] . "</p>";
 
             if ($purchaseProducts) {
-                // Display products in a table
+                
                 echo '<table>';
                 echo '<tr>
                         

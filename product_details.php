@@ -1,5 +1,4 @@
 <?php
-// Home.php
 session_start();
 $userLoggedIn = isset($_SESSION['user_id']);
 ?>
@@ -28,12 +27,12 @@ if ($userLoggedIn && isset($_POST['favorite_submit'])) {
         $is_favorite = $stmt_check_favorite->fetch();
 
         if ($is_favorite) {
-            // If already a favorite, remove from favorites
+            
             $stmt_remove_favorite = $dbh->prepare('DELETE FROM Favorites WHERE username = ? AND id = ?');
             $stmt_remove_favorite->execute(array($_SESSION['user_id'], $product_id));
             $debug_message = "Product removed from favorites";
         } else {
-            // If not a favorite, add to favorites
+           
             $stmt_add_favorite = $dbh->prepare('INSERT INTO Favorites (username, id) VALUES (?, ?)');
             $stmt_add_favorite->execute(array($_SESSION['user_id'], $product_id));
             $debug_message = "Product added to favorites";
