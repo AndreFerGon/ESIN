@@ -2,24 +2,17 @@ PRAGMA foreign_keys = ON;
 .headers on
 .mode columns
 
-DROP TABLE IF EXISTS Person;
-DROP TABLE IF EXISTS Client;
-DROP TABLE IF EXISTS Employee;
-DROP TABLE IF EXISTS Shop;
-DROP TABLE IF EXISTS Purchase;
 
+DROP TABLE IF EXISTS Client;
+DROP TABLE IF EXISTS Purchase;
 DROP TABLE IF EXISTS Category;
 DROP TABLE IF EXISTS Product;
-
-DROP TABLE IF EXISTS DeliveryCenter;
 DROP TABLE IF EXISTS Reparation;
 DROP TABLE IF EXISTS Facility;
-DROP TABLE IF EXISTS ProductPurchase;
-DROP TABLE IF EXISTS PurchaseShop;
 DROP TABLE IF EXISTS ReparationFacility;
-
 DROP TABLE IF EXISTS Favorites;
 DROP TABLE IF EXISTS Return;
+DROP TABLE IF EXISTS Purchase_Products;
  
 
  CREATE TABLE Return (
@@ -30,20 +23,6 @@ DROP TABLE IF EXISTS Return;
     quantity INTEGER NOT NULL CHECK(quantity > 0)
 );
 
-
-CREATE TABLE Person (
-    vat INTEGER PRIMARY KEY,
-    name_ TEXT NOT NULL,
-    phone_number TEXT NOT NULL,
-    email TEXT NOT NULL
-);
- 
- CREATE TABLE Employee (
-    vat INTEGER PRIMARY KEY REFERENCES Person,
-    ein INTEGER NOT NULL, 
-    shop INTEGER NOT NULL REFERENCES Shop
-);
-
 CREATE TABLE Client (
     username TEXT PRIMARY KEY,
     password TEXT,
@@ -51,13 +30,7 @@ CREATE TABLE Client (
     address_ TEXT NOT NULL
 );
  
-CREATE TABLE Shop (
-    name TEXT PRIMARY KEY,
-    address_ TEXT NOT NULL, 
-    email TEXT NOT NULL
-);
- 
- CREATE TABLE Purchase (
+CREATE TABLE Purchase (
     number_ INTEGER PRIMARY KEY,
     price INTEGER NOT NULL CHECK(price > 0),
     date_ INTEGER NOT NULL,
@@ -86,12 +59,6 @@ CREATE TABLE Product (
     specs TEXT NOT NULL,
     price FLOAT NOT NULL
     
-);
- 
-CREATE TABLE DeliveryCenter (
-    id INTEGER PRIMARY KEY,
-    name_ TEXT NOT NULL UNIQUE,
-    address_ TEXT NOT NULL UNIQUE 
 );
  
 CREATE TABLE Reparation (
@@ -124,14 +91,6 @@ CREATE TABLE Favorites (
     PRIMARY KEY (username, id),
     FOREIGN KEY (username) REFERENCES Users(username),
     FOREIGN KEY (id) REFERENCES Product(id)
-);
-
-
-
-CREATE TABLE PurchaseShop (
-    shop TEXT NOT NULL REFERENCES Shop,
-    purchase INTEGER NOT NULL REFERENCES Purchase,
-    PRIMARY KEY(shop, purchase)
 );
 
 
